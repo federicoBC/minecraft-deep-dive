@@ -154,6 +154,557 @@ export const knowledgeBase: InfoItem[] = [
     ],
     keywords: ['rame', 'copper', 'y level', 'minerali', 'dripstone']
   },
+  {
+    id: 'netherite-y-level',
+    category: 'info',
+    subcategory: 'Minerali',
+    title: 'Netherite (Ancient Debris) - Livello Y Ottimale',
+    description: 'L\'Ancient Debris è il minerale più raro del gioco, trovato solo nel Nether. Si smelta in Netherite Scrap.',
+    details: [
+      'Range: Y 8 a Y 119 (nel Nether)',
+      'Livello ottimale: Y 15 (massima concentrazione)',
+      'Massimo 2 vene per chunk',
+      'Non brucia nella lava (può essere trovato nella lava)',
+      'Servono 4 scrap + 4 lingotti d\'oro = 1 Netherite Ingot',
+      'Blast resistant: non viene distrutto dalle esplosioni'
+    ],
+    tips: [
+      'Usa bed/TNT mining: fai esplodere letti per scavare velocemente',
+      'Branch mining a Y 15 è il più efficiente',
+      'Fortune NON funziona - usa Silk Touch o piccone normale',
+      'Porta Fire Resistance per la lava',
+      'Un set completo richiede circa 36 Ancient Debris'
+    ],
+    errors: [
+      'Minare troppo in alto (sopra Y 22)',
+      'Usare Fortune (non aumenta i drop)',
+      'Dimenticare la Fire Resistance'
+    ],
+    keywords: ['netherite', 'ancient debris', 'nether', 'y level', 'minerali', 'debris', 'scrap', 'bed mining', 'tnt mining', 'armatura', 'best armor']
+  },
+  // BASIC INFO CHE L'AI DEVE SAPERE
+  {
+    id: 'crafting-table-basics',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Crafting Table - Come Craftare',
+    description: 'Il tavolo da lavoro è il primo oggetto essenziale. Si crafta con 4 assi di legno.',
+    details: [
+      'Recipe: 4 assi di legno (qualsiasi tipo) in un quadrato 2x2',
+      'Permette crafting in griglia 3x3',
+      'Essenziale per quasi tutti gli strumenti',
+      'Può essere piazzato e riutilizzato'
+    ],
+    keywords: ['crafting', 'table', 'tavolo', 'lavoro', 'craft', 'basics', 'come si fa', 'come crafto']
+  },
+  {
+    id: 'furnace-basics',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Fornace - Come Usarla',
+    description: 'La fornace cuoce cibi, smelta minerali e crea altri materiali. Fondamentale per la progressione.',
+    details: [
+      'Recipe: 8 cobblestone in cerchio (centro vuoto)',
+      'Slot superiore: oggetto da cuocere',
+      'Slot inferiore: combustibile',
+      'Output: slot a destra'
+    ],
+    tips: [
+      'Carbone cuoce 8 item',
+      'Lava bucket cuoce 100 item (il migliore)',
+      'Kelp block cuoce 20 item (rinnovabile)',
+      'Blast Furnace: 2x veloce per minerali',
+      'Smoker: 2x veloce per cibo'
+    ],
+    keywords: ['fornace', 'furnace', 'cuocere', 'smelting', 'smeltare', 'carbone', 'combustibile']
+  },
+  {
+    id: 'wood-types',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Tipi di Legno',
+    description: 'Esistono 10+ tipi di legno in Minecraft, tutti funzionalmente identici ma esteticamente diversi.',
+    details: [
+      'Overworld: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry',
+      'Nether: Crimson, Warped (non bruciano!)',
+      'Tutti danno 4 assi per blocco',
+      'I log possono essere "stripped" con ascia'
+    ],
+    keywords: ['legno', 'wood', 'oak', 'quercia', 'spruce', 'abete', 'birch', 'betulla', 'jungle', 'acacia', 'dark oak', 'mangrove', 'cherry', 'ciliegio', 'crimson', 'warped']
+  },
+  {
+    id: 'hunger-system',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Sistema della Fame',
+    description: 'La fame diminuisce con le azioni e influenza la rigenerazione della salute.',
+    details: [
+      'Barra fame: 20 punti (10 "cosce")',
+      'Saturazione: valore nascosto che rallenta la perdita di fame',
+      'Sotto 6 punti: non puoi sprintare',
+      'Sotto 0 punti: perdi vita (Easy/Normal) o muori (Hard)',
+      'A fame piena + saturazione: rigeneri HP'
+    ],
+    tips: [
+      'Golden Carrot: miglior saturazione',
+      'Steak/Porkchop: ottimo rapporto cibo/saturazione',
+      'Suspicious Stew: può dare effetti bonus',
+      'Non mangiare quando sei già pieno (sprechi saturazione)'
+    ],
+    keywords: ['fame', 'hunger', 'cibo', 'food', 'mangiare', 'saturazione', 'saturation', 'health', 'vita', 'regeneration']
+  },
+  {
+    id: 'health-regeneration',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Rigenerazione Vita',
+    description: 'La vita si rigenera automaticamente quando la fame è alta. Esistono vari metodi per curarsi.',
+    details: [
+      'Natural Regen: fame 18+ e saturazione > 0',
+      'Difficoltà Peaceful: regen istantanea',
+      'Golden Apple: 4 cuori + absorption',
+      'Enchanted Golden Apple: 8 cuori + absorption + resistances',
+      'Potion of Healing: cura istantanea'
+    ],
+    keywords: ['vita', 'health', 'cuori', 'hearts', 'regen', 'rigenerazione', 'cura', 'healing', 'golden apple', 'pozione']
+  },
+  {
+    id: 'tool-materials',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Materiali degli Strumenti',
+    description: 'Gli strumenti hanno 6 livelli di materiale, ognuno con durabilità e velocità diverse.',
+    table: {
+      headers: ['Materiale', 'Durabilità', 'Velocità', 'Note'],
+      rows: [
+        ['Legno', '59', '2.0', 'Solo per inizio'],
+        ['Pietra', '131', '4.0', 'Facile da ottenere'],
+        ['Ferro', '250', '6.0', 'Bilanciato'],
+        ['Oro', '32', '12.0', 'Velocissimo ma fragile'],
+        ['Diamante', '1561', '8.0', 'End-game Overworld'],
+        ['Netherite', '2031', '9.0', 'Migliore in assoluto']
+      ]
+    },
+    keywords: ['tools', 'strumenti', 'pickaxe', 'piccone', 'sword', 'spada', 'axe', 'ascia', 'shovel', 'pala', 'durability', 'durabilità', 'materiale']
+  },
+  {
+    id: 'armor-protection',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Protezione Armatura',
+    description: 'L\'armatura riduce il danno ricevuto. La protezione massima è 80%.',
+    table: {
+      headers: ['Set', 'Punti Armor', 'Toughness', 'Riduzione'],
+      rows: [
+        ['Leather', '7', '0', '28%'],
+        ['Gold', '11', '0', '44%'],
+        ['Chain', '12', '0', '48%'],
+        ['Iron', '15', '0', '60%'],
+        ['Diamond', '20', '8', '80%'],
+        ['Netherite', '20', '12', '80% + knockback res']
+      ]
+    },
+    details: [
+      'Armor Toughness riduce il danno da attacchi forti',
+      'Netherite ha Knockback Resistance intrinseca',
+      'Protection enchant aumenta ulteriormente'
+    ],
+    keywords: ['armatura', 'armor', 'protezione', 'protection', 'leather', 'gold', 'iron', 'diamond', 'netherite', 'toughness']
+  },
+  {
+    id: 'biomes-overview',
+    category: 'info',
+    subcategory: 'World',
+    title: 'Panoramica Biomi',
+    description: 'Minecraft ha oltre 60 biomi diversi, ognuno con caratteristiche uniche.',
+    details: [
+      'Plains: villager comuni, cavalli',
+      'Forest: legno abbondante, wolf',
+      'Desert: temple, cactus, no pioggia',
+      'Jungle: cocoa, ocelot, temple, meloni',
+      'Taiga: wolf, sweet berry, village',
+      'Swamp: witch hut, slime, blue orchid',
+      'Ocean: monument, conduit, drowned',
+      'Mountain: smeraldi, goat, neve',
+      'Mushroom Island: no mob ostili spawn!'
+    ],
+    keywords: ['biomi', 'biome', 'plains', 'forest', 'desert', 'jungle', 'taiga', 'swamp', 'ocean', 'mountain', 'mushroom']
+  },
+  {
+    id: 'nether-biomes',
+    category: 'info',
+    subcategory: 'World',
+    title: 'Biomi del Nether',
+    description: 'Il Nether ha 5 biomi principali dal 1.16, ognuno con risorse uniche.',
+    details: [
+      'Nether Wastes: classico, ghast, fortress',
+      'Crimson Forest: hoglins, fungo rosso',
+      'Warped Forest: enderman, fungo blu, sicuro',
+      'Soul Sand Valley: skeleton, ghast, soul speed',
+      'Basalt Deltas: magma cube, blackstone, oro'
+    ],
+    tips: [
+      'Warped Forest è il bioma più sicuro',
+      'Basalt Deltas ottimo per oro e blackstone',
+      'Soul Sand Valley per ossa e soul speed'
+    ],
+    keywords: ['nether', 'biomi', 'crimson', 'warped', 'soul sand', 'basalt', 'fortress']
+  },
+  {
+    id: 'end-dimension',
+    category: 'info',
+    subcategory: 'World',
+    title: 'The End - Dimensione',
+    description: 'L\'End è la dimensione finale con il Dragon, End Cities e Elytra.',
+    details: [
+      'Accesso: End Portal nelle Stronghold',
+      'Main island: Ender Dragon fight',
+      'Outer islands: a 1000 blocchi, End Cities',
+      'End Cities: shulker, elytra, ottimo loot',
+      'Chorus fruit: cresce nell\'End, teletrasporto random'
+    ],
+    tips: [
+      'Porta blocchi per bridging',
+      'Ender chest per salvare loot prezioso',
+      'Slow Falling potion essenziale'
+    ],
+    keywords: ['end', 'dragon', 'ender', 'elytra', 'end city', 'shulker', 'chorus', 'stronghold']
+  },
+  {
+    id: 'xp-sources',
+    category: 'info',
+    subcategory: 'Progression',
+    title: 'Fonti di XP',
+    description: 'L\'esperienza serve per incantare e riparare. Ecco le migliori fonti.',
+    details: [
+      'Mob kill: varia per mob (Ender Dragon 12000 XP!)',
+      'Breeding animali: 1-7 XP',
+      'Trading: 3-6 XP per trade',
+      'Smelting: 0.1-1 XP per item',
+      'Mining: quarzo, redstone, diamanti, carbone, lapis',
+      'Fishing: 1-6 XP per catch',
+      'Bottle o\' Enchanting: 3-11 XP'
+    ],
+    tips: [
+      'Enderman farm: migliore per XP/ora',
+      'Quartz nel Nether: facile early game',
+      'Furnace XP: si accumula, raccogli tutto insieme'
+    ],
+    keywords: ['xp', 'esperienza', 'experience', 'livelli', 'levels', 'farming', 'enchanting']
+  },
+  {
+    id: 'sleeping-mechanics',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Dormire - Meccaniche',
+    description: 'Dormire salta la notte, imposta lo spawn point e resetta il timer dei Phantom.',
+    details: [
+      'Letto: 3 lana + 3 assi',
+      'Dorme solo di notte o durante temporale',
+      'Imposta il respawn point',
+      'In multiplayer: tutti devono dormire (o % configurabile)',
+      'Nel Nether/End: ESPLODE!'
+    ],
+    keywords: ['dormire', 'sleep', 'letto', 'bed', 'spawn', 'respawn', 'notte', 'night', 'phantom']
+  },
+  {
+    id: 'coordinate-system',
+    category: 'info',
+    subcategory: 'Basics',
+    title: 'Sistema di Coordinate',
+    description: 'Le coordinate X, Y, Z ti aiutano a orientarti e trovare posizioni specifiche.',
+    details: [
+      'X: Est (+) / Ovest (-)',
+      'Y: Alto (+) / Basso (-) - altitudine',
+      'Z: Sud (+) / Nord (-)',
+      'F3 per vedere le coordinate',
+      'Il sole sorge a Est (X+), tramonta a Ovest (X-)'
+    ],
+    tips: [
+      'Segna le coordinate di base/portal/strutture',
+      'Nether: dividi X e Z per 8 per calcolare la posizione Overworld',
+      '/tp @p x y z per teletrasportarti (creative/cheats)'
+    ],
+    keywords: ['coordinate', 'xyz', 'posizione', 'f3', 'debug', 'navigare', 'orientamento']
+  },
+  {
+    id: 'swimming-mechanics',
+    category: 'info',
+    subcategory: 'Movement',
+    title: 'Nuoto e Respirazione',
+    description: 'Nuotare consuma ossigeno. Esistono vari modi per respirare sott\'acqua.',
+    details: [
+      'Barra ossigeno: 15 secondi (300 bubble)',
+      'Respiration: +15 sec per livello',
+      'Turtle Shell: +10 secondi',
+      'Conduit: respirazione infinita nell\'area',
+      'Water Breathing potion: 3/8 minuti'
+    ],
+    tips: [
+      'Porta porte/torce: creano sacche d\'aria',
+      'Magma block: crea colonne di bolle verso il basso',
+      'Soul Sand: colonne verso l\'alto',
+      'Depth Strider: nuota più veloce'
+    ],
+    keywords: ['nuotare', 'swim', 'respirare', 'breath', 'ossigeno', 'oxygen', 'drowning', 'conduit', 'respiration']
+  },
+  {
+    id: 'fall-damage-calc',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Calcolo Danno da Caduta',
+    description: 'Il danno da caduta inizia dopo 3 blocchi di caduta. Formula: (blocchi - 3) = cuori persi.',
+    details: [
+      'Caduta sicura: 3 blocchi',
+      '4 blocchi: 0.5 cuori',
+      '23 blocchi: 10 cuori (morte senza armatura)',
+      'Feather Falling IV: -48% danno',
+      'Protection IV (full): riduzione aggiuntiva'
+    ],
+    tips: [
+      'Hay bale: -80% fall damage',
+      'Slime/honey block: annulla il danno',
+      'Acqua: annulla completamente',
+      'Slow Falling: nessun danno'
+    ],
+    keywords: ['caduta', 'fall damage', 'danno', 'altezza', 'feather falling', 'morte']
+  },
+  {
+    id: 'spawning-rules',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Regole di Spawn Mob',
+    description: 'I mob spawnano seguendo regole precise di luce, spazio e distanza.',
+    details: [
+      'Mob ostili: luce 0 (dal 1.18)',
+      'Distanza spawn: 24-128 blocchi dal player',
+      'Despawn: >128 blocchi istantaneo, >32 random',
+      'Mob cap: 70 mob ostili per player',
+      'Spawnable blocks: solidi, non trasparenti'
+    ],
+    tips: [
+      'Illumina le cave per farm più efficienti',
+      'Mob cap globale = meno spawn ovunque',
+      'Slabs/glass prevengono spawn',
+      'Carpet su spawn block = spawn bloccato'
+    ],
+    keywords: ['spawn', 'mob', 'luce', 'light', 'despawn', 'mob cap', 'hostile']
+  },
+  {
+    id: 'enchanting-basics',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Incantamento - Guida Base',
+    description: 'Il tavolo degli incantesimi usa lapis e livelli per applicare enchant casuali.',
+    details: [
+      'Recipe tavolo: 4 obsidian + 2 diamanti + 1 libro',
+      'Librerie: massimo 15 per enchant lvl 30',
+      'Distanza librerie: 1 blocco dal tavolo, niente in mezzo',
+      'Costo: 1-3 lapis + 1-3 livelli XP'
+    ],
+    tips: [
+      'Sempre incanta al livello 30 per best enchant',
+      'Incanta libro se non vuoi l\'enchant offerto',
+      'Grindstone rimuove enchant e dà XP',
+      'Anvil per combinare enchant'
+    ],
+    table: {
+      headers: ['Livello', 'Librerie Richieste', 'Costo Lapis'],
+      rows: [
+        ['1-8', '0', '1'],
+        ['9-17', '1-8', '1-2'],
+        ['18-26', '9-14', '2-3'],
+        ['27-30', '15', '3']
+      ]
+    },
+    keywords: ['incantare', 'enchant', 'enchanting', 'tavolo', 'librerie', 'bookshelf', 'lapis', 'xp', 'livello 30']
+  },
+  {
+    id: 'best-enchants-armor',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Migliori Enchant Armatura',
+    description: 'Gli enchant ottimali per ogni pezzo di armatura.',
+    details: [
+      'Helmet: Protection IV, Unbreaking III, Mending, Aqua Affinity, Respiration III',
+      'Chestplate: Protection IV, Unbreaking III, Mending',
+      'Leggings: Protection IV, Unbreaking III, Mending, Swift Sneak III',
+      'Boots: Protection IV, Unbreaking III, Mending, Feather Falling IV, Depth Strider III/Frost Walker II, Soul Speed III'
+    ],
+    tips: [
+      'Protection IV > specialized protection per uso generale',
+      'Fire Protection per Nether intensivo',
+      'Blast Protection per Wither fight',
+      'Thorns consuma durabilità velocemente'
+    ],
+    keywords: ['enchant', 'armatura', 'protection', 'mending', 'unbreaking', 'feather falling', 'helmet', 'boots']
+  },
+  {
+    id: 'best-enchants-tools',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Migliori Enchant Strumenti',
+    description: 'Gli enchant ottimali per piccone, ascia, pala e zappa.',
+    details: [
+      'Piccone: Efficiency V, Unbreaking III, Mending, Fortune III/Silk Touch',
+      'Ascia: Efficiency V, Unbreaking III, Mending, Sharpness V (weapon backup)',
+      'Pala: Efficiency V, Unbreaking III, Mending, Silk Touch (grass)',
+      'Zappa: Efficiency V, Unbreaking III, Mending, Fortune III (nether wart)'
+    ],
+    tips: [
+      'Fortune III: 2.2x drop in media per diamanti',
+      'Silk Touch: essenziale per grass, glass, ender chest',
+      'Usa 2 picconi: uno Fortune, uno Silk Touch'
+    ],
+    keywords: ['enchant', 'piccone', 'pickaxe', 'efficiency', 'fortune', 'silk touch', 'mending', 'tools']
+  },
+  {
+    id: 'best-enchants-weapons',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Migliori Enchant Armi',
+    description: 'Gli enchant ottimali per spada, arco, balestra e tridente.',
+    details: [
+      'Spada: Sharpness V, Unbreaking III, Mending, Looting III, Sweeping Edge III, Fire Aspect II',
+      'Arco: Power V, Infinity/Mending, Unbreaking III, Flame, Punch II',
+      'Balestra: Quick Charge III, Multishot/Piercing IV, Unbreaking III, Mending',
+      'Tridente: Loyalty III, Impaling V, Channeling (OR) Riptide III, Unbreaking III, Mending'
+    ],
+    tips: [
+      'Smite V > Sharpness per undead (Wither!)',
+      'Bane of Arthropods per spider/silverfish',
+      'Looting III: essenziale per rare drops',
+      'Infinity vs Mending: Infinity per comodità, Mending per durabilità'
+    ],
+    keywords: ['enchant', 'spada', 'sword', 'arco', 'bow', 'tridente', 'trident', 'sharpness', 'looting', 'power']
+  },
+  {
+    id: 'anvil-mechanics',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Incudine - Meccaniche',
+    description: 'L\'incudine combina enchant, ripara item e rinomina. Ha costi crescenti.',
+    details: [
+      'Prior Work Penalty: il costo raddoppia ogni uso',
+      'Max cost: 39 livelli (oltre = "Too Expensive")',
+      'Ordine combinazione: metti l\'item più lavorato a destra',
+      'Riparare: stessa item O materiale base',
+      'Rinominare: 1 livello (utile per tool naming)'
+    ],
+    tips: [
+      'Combina enchant in ordine ottimale per ridurre costi',
+      'Libri con 1 enchant costano meno',
+      'Rinomina PRIMA di enchantare',
+      'Too Expensive? Grindstone e riparti'
+    ],
+    keywords: ['anvil', 'incudine', 'combinare', 'riparare', 'too expensive', 'prior work', 'rename']
+  },
+  {
+    id: 'how-get-mending',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Come Ottenere Mending',
+    description: 'Mending è il treasure enchant più importante. Non si trova al tavolo degli incantesimi.',
+    details: [
+      'Villager Librarian: trade (può essere resettato)',
+      'Chest loot: Dungeon, Mineshaft, End City, Ancient City',
+      'Fishing: possibile ma molto raro',
+      'Raid: drop dagli Evoker (raro)',
+      'NON ottenibile dal tavolo degli incantesimi'
+    ],
+    tips: [
+      'Resetta i librarian fino a Mending al primo slot',
+      'Curare zombie villager = Mending per 1 emerald',
+      'Una volta trovato, non tradare altro per bloccarlo'
+    ],
+    keywords: ['mending', 'come', 'ottenere', 'trovare', 'librarian', 'villager', 'repair', 'riparare']
+  },
+  {
+    id: 'how-get-looting',
+    category: 'info',
+    subcategory: 'Enchanting',
+    title: 'Come Ottenere Looting III',
+    description: 'Looting aumenta i drop dei mob. Essenziale per farming.',
+    details: [
+      'Tavolo degli incantesimi: possibile al livello 30',
+      'Villager Librarian: acquistabile come libro',
+      'Chest loot: varie strutture',
+      'Effetto: +1 drop per livello di Looting'
+    ],
+    tips: [
+      'Looting III = fino a +3 drop extra',
+      'Funziona su tutte le rare drops',
+      'Essenziale per Wither Skeleton skull farming',
+      'Stack con altre fonti di drop (es. charged creeper heads)'
+    ],
+    keywords: ['looting', 'come', 'ottenere', 'drop', 'rare', 'farm', 'enchant']
+  },
+  {
+    id: 'brewing-basics',
+    category: 'info',
+    subcategory: 'Pozioni',
+    title: 'Brewing - Guida Base',
+    description: 'Il Brewing Stand crea pozioni usando Blaze Powder come fuel e vari ingredienti.',
+    details: [
+      'Fuel: Blaze Powder (20 usi)',
+      'Base: Water Bottle',
+      'Step 1: Nether Wart → Awkward Potion',
+      'Step 2: Ingrediente effetto',
+      'Step 3: Modificatori (Redstone=durata, Glowstone=potenza)'
+    ],
+    tips: [
+      'Gunpowder: rende splash (lanciabile)',
+      'Dragon Breath: rende lingering (area)',
+      'Fermented Spider Eye: corrompe l\'effetto'
+    ],
+    keywords: ['brewing', 'pozioni', 'potions', 'potion', 'alchimia', 'blaze', 'nether wart', 'awkward']
+  },
+  {
+    id: 'useful-potions',
+    category: 'info',
+    subcategory: 'Pozioni',
+    title: 'Pozioni Più Utili',
+    description: 'Le pozioni essenziali per survival, combat e esplorazione.',
+    table: {
+      headers: ['Pozione', 'Ingrediente', 'Effetto'],
+      rows: [
+        ['Fire Resistance', 'Magma Cream', 'Immune al fuoco/lava (8 min)'],
+        ['Night Vision', 'Golden Carrot', 'Vedi nel buio (8 min)'],
+        ['Strength', 'Blaze Powder', '+3 danno melee (8 min)'],
+        ['Speed', 'Sugar', '+20% velocità (8 min)'],
+        ['Healing', 'Glistering Melon', 'Cura 4 cuori (instant)'],
+        ['Slow Falling', 'Phantom Membrane', 'Caduta lenta (4 min)'],
+        ['Water Breathing', 'Pufferfish', 'Respira sott\'acqua (8 min)']
+      ]
+    },
+    keywords: ['pozioni', 'potions', 'fire resistance', 'night vision', 'strength', 'speed', 'healing', 'slow falling']
+  },
+  {
+    id: 'villager-professions',
+    category: 'info',
+    subcategory: 'Villager',
+    title: 'Tutte le Professioni Villager',
+    description: 'I villager hanno 13 professioni, ognuna con trade unici.',
+    table: {
+      headers: ['Professione', 'Workstation', 'Trade Chiave'],
+      rows: [
+        ['Armorer', 'Blast Furnace', 'Diamond armor'],
+        ['Butcher', 'Smoker', 'Cooked meat'],
+        ['Cartographer', 'Cartography Table', 'Explorer maps'],
+        ['Cleric', 'Brewing Stand', 'Ender Pearl, Redstone'],
+        ['Farmer', 'Composter', 'Golden Carrot, food'],
+        ['Fisherman', 'Barrel', 'Fishing rod, campfire'],
+        ['Fletcher', 'Fletching Table', 'Arrows, bows'],
+        ['Leatherworker', 'Cauldron', 'Leather armor'],
+        ['Librarian', 'Lectern', 'ENCHANTED BOOKS'],
+        ['Mason', 'Stonecutter', 'Quartz, terracotta'],
+        ['Shepherd', 'Loom', 'Wool, beds'],
+        ['Toolsmith', 'Smithing Table', 'Diamond tools'],
+        ['Weaponsmith', 'Grindstone', 'Diamond sword, axe']
+      ]
+    },
+    keywords: ['villager', 'professioni', 'profession', 'workstation', 'trade', 'librarian', 'armorer', 'farmer']
+  },
 
   // === FARM ===
   {
@@ -2444,6 +2995,552 @@ export const knowledgeBase: InfoItem[] = [
       'Some jumps require specific strats'
     ],
     keywords: ['parkour', 'jump', 'neo', '4-block', 'movement', 'advanced']
+  },
+
+  // === NUOVE VOCI PRO LEVEL ===
+  
+  // INFO PRO
+  {
+    id: 'update-order-mechanics',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Update Order - Meccaniche Avanzate',
+    description: 'L\'ordine in cui i blocchi si aggiornano è deterministico e sfruttabile.',
+    details: [
+      'Horizontal: WEST, EAST, DOWN, UP, NORTH, SOUTH',
+      'I circuiti redstone dipendono da questo ordine',
+      'Alcuni glitch funzionano solo in certe direzioni',
+      'Chunk borders possono causare aggiornamenti diversi',
+      'Block updates si propagano in modo specifico'
+    ],
+    keywords: ['update order', 'block update', 'bud', 'ordine', 'direzione', 'glitch']
+  },
+  {
+    id: 'heightmap-secrets',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Heightmap - Spawn e Generazione',
+    description: 'Gli heightmap influenzano spawn, strutture e generazione luce.',
+    details: [
+      'WORLD_SURFACE: blocco più alto non-aria',
+      'MOTION_BLOCKING: blocco che blocca il movimento',
+      'OCEAN_FLOOR: usato per strutture oceaniche',
+      'I mob calcolano spawn basandosi su heightmap',
+      'Slime chunks usano seed + chunk coords'
+    ],
+    keywords: ['heightmap', 'spawn', 'slime chunk', 'generazione', 'seed']
+  },
+  {
+    id: 'entity-collision-box',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Collision Box e Hitbox',
+    description: 'Ogni entità ha hitbox diversi per combattimento e collisione.',
+    details: [
+      'Hitbox: area colpibile (visibile con F3+B)',
+      'Collision box: area che blocca movimento',
+      'Player: 1.8 blocchi alto, 0.6 largo',
+      'Sneaking: 1.5 blocchi (passa sotto 1.5 gap)',
+      'Swimming/elytra: 0.6 blocchi (passa in 1-block gap)',
+      'Baby zombie: 0.975 alto (passa ovunque)'
+    ],
+    keywords: ['hitbox', 'collision', 'box', 'sneak', 'crawl', 'gap', '1 block']
+  },
+  {
+    id: 'tick-scheduling',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Tick Scheduling - Ordine Operazioni',
+    description: 'Cosa succede in ogni game tick e in che ordine.',
+    details: [
+      '1. Block events (piston)',
+      '2. Scheduled ticks (redstone)',
+      '3. Block entity ticks (furnace, hopper)',
+      '4. Entity ticks (mob AI, player)',
+      '5. Player actions',
+      'Questo ordine è cruciale per redstone timing'
+    ],
+    keywords: ['tick', 'scheduling', 'order', 'operazioni', 'game tick', 'timing']
+  },
+  {
+    id: 'structure-seed-mechanics',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Seed e Generazione Strutture',
+    description: 'Come il seed determina la posizione delle strutture.',
+    details: [
+      'Ogni struttura ha spacing e separation values',
+      'Stronghold: ring pattern dal spawn (1st ring: 3)',
+      'Nether Fortress: generate in fasce (banding)',
+      'Village: ogni biome type ha seed modifier',
+      'Ocean Monument: 32 chunk spacing',
+      'Tools come Chunkbase usano queste formule'
+    ],
+    keywords: ['seed', 'struttura', 'structure', 'stronghold', 'fortress', 'chunkbase', 'generazione']
+  },
+  
+  // FARM PRO
+  {
+    id: 'mob-cap-manipulation',
+    category: 'farm',
+    subcategory: 'Advanced',
+    title: 'Mob Cap Manipulation',
+    description: 'Controllare il mob cap è la chiave per farm efficienti.',
+    details: [
+      'Mob cap: 70 hostile per player (single player)',
+      'Conta solo i mob nella simulation distance',
+      'Mob in nether/end contano separatamente per spawn location',
+      'Mob cap = constant spawning attempts',
+      'Perimeter: rimuovi tutti gli altri spawn = spawn solo nella farm'
+    ],
+    tips: [
+      'Perimeter di 128 blocchi = massime rate',
+      'Mob in minecart/boat non contano vs cap',
+      'Peaceful poi Hard resetta i mob'
+    ],
+    keywords: ['mob cap', 'farm', 'spawn', 'perimeter', 'rate', 'efficiency']
+  },
+  {
+    id: 'portal-based-farm',
+    category: 'farm',
+    subcategory: 'Advanced',
+    title: 'Portal-Based Gold/XP Farm',
+    description: 'Le farm basate su portali sfruttano lo spawn di Zombified Piglin.',
+    details: [
+      'I portali generano Zombified Piglin casualmente',
+      'Rate: ~19.2 spawn attempts per portal block per minute',
+      'Massimo efficiente: 1000+ portali',
+      'Entity cramming per kill automatiche',
+      'Rates: 100k+ oro/ora possibili'
+    ],
+    tips: [
+      'Costruisci nell\'Overworld roof',
+      'Portali 23x23 (max size)',
+      'Looting switch per farm switching'
+    ],
+    keywords: ['portal', 'farm', 'gold', 'piglin', 'nether', 'xp', 'oro']
+  },
+  {
+    id: 'item-sorting-advanced',
+    category: 'farm',
+    subcategory: 'Storage',
+    title: 'Item Sorting System - Overflow Proof',
+    description: 'Sistema di smistamento oggetti che non si rompe.',
+    details: [
+      'Classic: hopper con 41 item + 4 filler',
+      'Filler: item che non droppa mai (renamed stick)',
+      'Signal strength 3 = comparator output per filter',
+      'Overflow protection: hopper lock con redstone',
+      'Multi-item: multipli filter in sequenza'
+    ],
+    tips: [
+      'Non stackable items: use different design',
+      'Allay sorting: per item non filtrabili',
+      'Water stream per distribuzione iniziale'
+    ],
+    keywords: ['sorting', 'storage', 'hopper', 'filter', 'item', 'smistamento', 'automatico']
+  },
+  {
+    id: 'crop-growth-mechanics',
+    category: 'farm',
+    subcategory: 'Crops',
+    title: 'Meccaniche Crescita Crop',
+    description: 'Come funziona la crescita delle coltivazioni in dettaglio.',
+    details: [
+      'Random tick: 3 per chunk per game tick (default)',
+      'Growth chance dipende da: light, farmland hydration, surrounding crops',
+      'Optimal layout: righe singole alternate',
+      'Bonemeal: cresce istantaneamente (1-7 usi per maturità)',
+      'Sugar cane/cactus: non usano random tick per crescita'
+    ],
+    tips: [
+      'Crop spacing: checkerboard pattern è ottimale',
+      'Bone meal farm con composter',
+      'Nether wart: cresce in qualsiasi light level'
+    ],
+    keywords: ['crop', 'farm', 'growth', 'crescita', 'wheat', 'carrot', 'potato', 'random tick']
+  },
+  {
+    id: 'spawn-proofing-techniques',
+    category: 'farm',
+    subcategory: 'Advanced',
+    title: 'Spawn Proofing Techniques',
+    description: 'Modi per impedire lo spawn di mob in specifiche aree.',
+    details: [
+      'Light level 0+ ora blocca mob ostili',
+      'Bottom slabs: no spawn',
+      'Glass: no spawn',
+      'Carpet: no spawn (ma attenzione a sotto)',
+      'Buttons/pressure plates: spawn proof',
+      'String: invisibile + spawn proof',
+      'Trapdoor: spawn proof se aperto'
+    ],
+    keywords: ['spawn', 'proof', 'light', 'slab', 'carpet', 'mob', 'bloccare']
+  },
+  
+  // COMBAT PRO
+  {
+    id: 'damage-immunity-exploit',
+    category: 'combat',
+    subcategory: 'Meccaniche',
+    title: 'Damage Immunity Exploit',
+    description: 'Exploit avanzati del sistema di i-frames.',
+    details: [
+      'I-frames: 0.5 secondi dopo ogni danno',
+      'Exploit: danno basso prima di danno alto = blocca danno alto',
+      'Cactus + fall damage = puoi sopravvivere a cadute mortali',
+      'Berry bush triggera i-frames senza danno significativo',
+      'Magma block tick damage = reset continuo'
+    ],
+    keywords: ['i-frame', 'immunity', 'exploit', 'damage', 'survival', 'invincibility']
+  },
+  {
+    id: 'crit-and-combo-tech',
+    category: 'combat',
+    subcategory: 'PvP/PvE',
+    title: 'Critical + Combo Tech',
+    description: 'Tecniche avanzate per massimizzare DPS.',
+    details: [
+      'Crit: 150% damage richiede caduta',
+      'Jump crit: basic, colpisci appena inizi a scendere',
+      'W-tap: rilascia W per resettare sprint, knockback max',
+      'S-tap: indietro durante cooldown, poi W per attack',
+      'Blockhit: blocca mentre attacchi (legacy combat)',
+      'Sprint reset con S o rilascio W'
+    ],
+    keywords: ['crit', 'combo', 'pvp', 'dps', 'w-tap', 's-tap', 'sprint']
+  },
+  {
+    id: 'totem-mechanics-deep',
+    category: 'combat',
+    subcategory: 'Items',
+    title: 'Totem of Undying - Deep Mechanics',
+    description: 'Meccaniche avanzate del Totem che pochi conoscono.',
+    details: [
+      'Deve essere in mano (main o offhand) per attivarsi',
+      'Resetta HP a 1 cuore + dà effetti',
+      'Effetti: 40s Regen II, 45s Fire Res, 5s Absorption II',
+      'NON salva da: void, /kill, starvation damage (hard)',
+      'Consumed anche in creative se tieni',
+      'Può essere attivato dalla "stessa morte" 2 volte (raro bug)'
+    ],
+    keywords: ['totem', 'undying', 'survival', 'effetti', 'death', 'void']
+  },
+  {
+    id: 'crossbow-vs-bow-analysis',
+    category: 'combat',
+    subcategory: 'Armi',
+    title: 'Crossbow vs Bow - Analisi Dettagliata',
+    description: 'Quando conviene usare balestra vs arco.',
+    details: [
+      'Bow: 6-15 damage (drawn), DPS più alto',
+      'Crossbow: 6-11 damage, ma Multishot/Piercing',
+      'Multishot: 3 frecce, solo 1 consuma durabilità',
+      'Piercing: attraversa mob, ottimo vs gruppi',
+      'Quick Charge III: quasi uguale all\'arco in velocità',
+      'Rocket crossbow: damage istantaneo, burst'
+    ],
+    tips: [
+      'Bow + Power V = best single target',
+      'Crossbow + Multishot = best crowd control',
+      'Firework crossbow per dragons/crowd'
+    ],
+    keywords: ['crossbow', 'bow', 'balestra', 'arco', 'multishot', 'piercing', 'damage']
+  },
+  {
+    id: 'sweeping-attack-mechanics',
+    category: 'combat',
+    subcategory: 'PvP/PvE',
+    title: 'Sweeping Edge Attack',
+    description: 'L\'attacco sweep della spada e come massimizzarlo.',
+    details: [
+      'Sweep: colpisce mob vicini al target primario',
+      'Raggio: 1 blocco intorno al target',
+      'Damage: 1 + floor(base_damage * sweep_multiplier)',
+      'Sweep multiplier: 0.5 base, +12.5% per livello di Sweeping Edge',
+      'Sweeping Edge III: 75% del danno del colpo principale',
+      'Non si attiva se salti (i.e., durante crit)'
+    ],
+    keywords: ['sweep', 'sweeping', 'edge', 'spada', 'sword', 'aoe', 'crowd']
+  },
+  
+  // MOB PRO
+  {
+    id: 'mob-pathfinding-exploit',
+    category: 'mob',
+    subcategory: 'AI',
+    title: 'Pathfinding Exploit',
+    description: 'Come sfruttare il pathfinding dei mob per trap e farm.',
+    details: [
+      'I mob calcolano il path verso il player',
+      'Preferiscono blocchi "cammabili"',
+      'Trapdoor aperto = considerato bloccato',
+      'I mob camminano su magma/campfire se è il path più breve',
+      'Porte: zombies cercano di romperle, skeleton no'
+    ],
+    tips: [
+      'Trapdoor trap: mob cadono perché pensano sia suolo',
+      'Magma walkway: damage passivo',
+      'Iron golem aggro per guidare mob specifici'
+    ],
+    keywords: ['pathfinding', 'ai', 'mob', 'trap', 'trapdoor', 'exploit']
+  },
+  {
+    id: 'mob-spawning-limits',
+    category: 'mob',
+    subcategory: 'AI',
+    title: 'Spawn Limits e Eccezioni',
+    description: 'Mob che ignorano le normali regole di spawn.',
+    details: [
+      'Slime: solo in slime chunks O swamp (night)',
+      'Magma Cube: ignora light level nel Nether',
+      'Ghast: 4+ blocchi spazio richiesto',
+      'Iron Golem: spawn da villager, no mob cap',
+      'Warden: spawn da sculk shrieker, no mob cap',
+      'Patrols: spawn overrida condizioni normali'
+    ],
+    keywords: ['spawn', 'limits', 'exception', 'slime', 'magma', 'golem', 'warden']
+  },
+  {
+    id: 'mob-xp-values',
+    category: 'mob',
+    subcategory: 'Stats',
+    title: 'XP Values per Mob',
+    description: 'Quanto XP droppano i vari mob.',
+    table: {
+      headers: ['Mob', 'XP', 'Note'],
+      rows: [
+        ['Ender Dragon (first)', '12000', 'Respawn: 500'],
+        ['Wither', '50', 'Difficile da farmare'],
+        ['Blaze', '10', 'Ottimo ratio'],
+        ['Enderman', '5', 'Facile da farmare'],
+        ['Piglin Brute', '20', 'Non respawna'],
+        ['Guardian', '10', 'Monument farm'],
+        ['Evoker', '10', '+ totem'],
+        ['Phantom', '5', 'Sleep per evitare'],
+        ['Baby Zombie', '12', '+ equipment XP']
+      ]
+    },
+    keywords: ['xp', 'experience', 'drop', 'mob', 'farming', 'livelli']
+  },
+  {
+    id: 'zombie-villager-cure',
+    category: 'mob',
+    subcategory: 'Mechanics',
+    title: 'Zombie Villager Cure - Dettagli',
+    description: 'Processo completo e sconti permanenti.',
+    details: [
+      '1. Lancia Splash Weakness (o freccia)',
+      '2. Usa Golden Apple sullo zombie villager',
+      '3. Attendi 3-5 minuti (faster se vicino a letti/barre di ferro)',
+      'Lo sconto è PERMANENTE e CUMULATIVO',
+      'Si resetta se il villager muore',
+      'Funziona solo in Normal/Hard (no peaceful/easy)'
+    ],
+    tips: [
+      'Cura lo stesso villager 5+ volte = 1 emerald per tutto',
+      'Iron bars e letti velocizzano la cura',
+      'Zombie villager mantiene la professione'
+    ],
+    keywords: ['zombie villager', 'cure', 'cura', 'sconto', 'discount', 'golden apple', 'weakness']
+  },
+  {
+    id: 'mob-drops-looting',
+    category: 'mob',
+    subcategory: 'Stats',
+    title: 'Rare Drops e Looting Effect',
+    description: 'Come Looting influenza le rare drops.',
+    details: [
+      'Looting aumenta max drops di 1 per livello',
+      'Rare drops: +1% chance per livello',
+      'Wither Skeleton skull: 2.5% → 5.5% con Looting III',
+      'Ender Pearl (Enderman): 0-1 → 0-4 con Looting III',
+      'Blaze Rod: 0-1 → 0-4 con Looting III',
+      'Alcune drops hanno cap (non aumentano)'
+    ],
+    keywords: ['looting', 'drops', 'rare', 'skull', 'blaze rod', 'ender pearl']
+  },
+  
+  // REDSTONE PRO
+  {
+    id: 'instant-wire',
+    category: 'redstone',
+    subcategory: 'Advanced',
+    title: 'Instant Wire - 0-tick Propagation',
+    description: 'Propagare segnale istantaneamente senza delay.',
+    details: [
+      'La redstone dust ha 0 delay di propagazione',
+      'Il delay viene dai componenti (repeater, comparator)',
+      'Instant wire: piston + observer per propagazione a distanza',
+      'Alternativa: comparator chain in subtract mode',
+      'Utile per: sincronizzazione farm, cannoni TNT'
+    ],
+    keywords: ['instant', 'wire', '0-tick', 'propagation', 'delay', 'piston']
+  },
+  {
+    id: 'double-piston-extender',
+    category: 'redstone',
+    subcategory: 'Circuiti',
+    title: 'Double/Triple Piston Extender',
+    description: 'Estendere la portata dei pistoni oltre il limite di 1 blocco.',
+    details: [
+      'Double: 2 pistoni in fila, segnale temporizzato',
+      'Il secondo piston spinge il primo (extended)',
+      'Retraction: inverse order',
+      'Triple: più complesso, richiede timing preciso',
+      'Slime blocks: può creare extender seamless'
+    ],
+    keywords: ['piston', 'extender', 'double', 'triple', 'timing', 'redstone']
+  },
+  {
+    id: 'tnt-duplicator',
+    category: 'redstone',
+    subcategory: 'Advanced',
+    title: 'TNT Duplicator',
+    description: 'Meccanismo per duplicare TNT usando glitch.',
+    details: [
+      'Sfrutta il fatto che TNT primed e block esistono insieme per 1 tick',
+      'Piston ritrae TNT mentre è primed',
+      'Risultato: TNT entity + TNT block',
+      'Necessario per cannoni infiniti',
+      'Funziona su Java, non su Bedrock'
+    ],
+    tips: [
+      'Coral fan design è il più compatto',
+      'Può causare lag se abusato',
+      'Essential per world eaters'
+    ],
+    keywords: ['tnt', 'duplicator', 'dupe', 'glitch', 'piston', 'cannon']
+  },
+  {
+    id: 'chunk-loading-redstone',
+    category: 'redstone',
+    subcategory: 'Advanced',
+    title: 'Chunk Loaders con Redstone',
+    description: 'Mantenere chunk caricati per farm AFK.',
+    details: [
+      'Entity processing: 5 chunk radius dal player',
+      'Nether portal: carica chunk per 15 secondi',
+      'Chunk loader: entità che attraversa portale ripetutamente',
+      'Hopper + minecart: attraversano chunk borders',
+      'Spawn chunks: sempre caricati ma no entity processing'
+    ],
+    keywords: ['chunk', 'loading', 'loader', 'afk', 'farm', 'entity']
+  },
+  {
+    id: 'wireless-redstone',
+    category: 'redstone',
+    subcategory: 'Advanced',
+    title: 'Wireless Redstone',
+    description: 'Trasmettere segnale senza connessione fisica.',
+    details: [
+      'Sculk sensor: rileva vibrazioni a distanza (8 blocchi)',
+      'Piston + observer: rileva a chunk distance',
+      'Allays: possono trasportare item (con note block)',
+      'TNT cannon: può attivare target block a distanza',
+      'Ender pearl in chunk loader: teleport trigger'
+    ],
+    keywords: ['wireless', 'sculk', 'sensor', 'distanza', 'remote', 'trigger']
+  },
+  
+  // TRICK PRO
+  {
+    id: 'water-bucket-tech',
+    category: 'trick',
+    subcategory: 'Utility',
+    title: 'Water Bucket Tech Avanzato',
+    description: 'Usi avanzati del secchio d\'acqua.',
+    difficulty: 'Pro',
+    details: [
+      'MLG: timing a ~2 blocchi dal suolo',
+      'Waterfall: piazza alto, raccogli basso per discesa',
+      'Enemy displacement: spingi mob lontano/in trappole',
+      'Enderman safe zone: cerchio d\'acqua intorno',
+      'Fire extinguish: spegni fuoco su te stesso',
+      'Obsidian farming: acqua su lava source'
+    ],
+    keywords: ['water', 'bucket', 'secchio', 'acqua', 'mlg', 'trick', 'utility']
+  },
+  {
+    id: 'lava-bucket-strats',
+    category: 'trick',
+    subcategory: 'Combat',
+    title: 'Lava Bucket Strategies',
+    description: 'Usare la lava come arma offensiva.',
+    difficulty: 'Pro',
+    details: [
+      'Piazza lava ai piedi del nemico',
+      'Raccogli dopo 2-3 secondi (prima che sparisca)',
+      'Bypassa armor (fire damage)',
+      'Ottimo vs mob senza fire resistance',
+      'Combinabile con knockback',
+      'In Nether: infinite lava = infinite weapon'
+    ],
+    keywords: ['lava', 'bucket', 'combat', 'fire', 'damage', 'pvp']
+  },
+  {
+    id: 'elytra-boost-methods',
+    category: 'trick',
+    subcategory: 'Movement',
+    title: 'Elytra Boost Methods',
+    description: 'Tutti i modi per accelerare con l\'elytra.',
+    difficulty: 'Pro',
+    details: [
+      'Firework: boost standard, 1-3 gunpowder = diversa potenza',
+      'Trident + Riptide: boost infinito durante pioggia',
+      'TNT: boost estremo ma dannoso',
+      'Punch bow: spara mentre plani per boost',
+      'Wind Charge: nuovo metodo in 1.21'
+    ],
+    tips: [
+      'Firework senza stars = no damage',
+      'Riptide III + pioggia = velocità massima',
+      'Unbreaking + Mending essenziali per elytra'
+    ],
+    keywords: ['elytra', 'boost', 'firework', 'riptide', 'volo', 'fly']
+  },
+  {
+    id: 'inventory-management',
+    category: 'trick',
+    subcategory: 'Utility',
+    title: 'Inventory Management Pro',
+    description: 'Shortcut e trucchi per gestire l\'inventario velocemente.',
+    difficulty: 'Noob',
+    details: [
+      'Shift+click: sposta stack intero',
+      'Ctrl+Q: droppa stack intero',
+      'Doppio click: raccoglie tutti gli item uguali',
+      'Drag+click: distribuisce item',
+      'Numeri 1-9: hotbar swap',
+      'F: swap main/offhand'
+    ],
+    tips: [
+      'Organizza hotbar: sword, pick, axe, food, blocks, torch, water, misc',
+      'Ender chest per valuables',
+      'Shulker box per massimo storage'
+    ],
+    keywords: ['inventory', 'inventario', 'management', 'shortcut', 'hotkey', 'quick']
+  },
+  {
+    id: 'nether-travel-optimization',
+    category: 'trick',
+    subcategory: 'Travel',
+    title: 'Nether Travel Optimization',
+    description: 'Viaggiare 8x più velocemente usando il Nether.',
+    difficulty: 'Pro',
+    details: [
+      '1 blocco nel Nether = 8 blocchi nell\'Overworld',
+      'Formula: Overworld coords / 8 = Nether coords',
+      'Crea hub nel Nether roof (Y 128+) per viaggi sicuri',
+      'Ice roads + boat: 40+ m/s possibile',
+      'Blue ice: 70+ m/s con boat'
+    ],
+    tips: [
+      'Porta obsidian e flint & steel',
+      'Coordinate Y non scalano',
+      'Mappa il Nether roof per viaggi sicuri'
+    ],
+    keywords: ['nether', 'travel', 'viaggio', 'veloce', 'fast', 'ice', 'boat', '8x']
   }
 ];
 

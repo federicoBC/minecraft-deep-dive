@@ -55,15 +55,6 @@ const sections = [
   },
 ];
 
-// Mineral Y-levels for quick reference
-const minerals = [
-  { name: 'Diamanti', y: '-59', color: 'bg-diamond' },
-  { name: 'Ferro', y: '16', color: 'bg-iron' },
-  { name: 'Oro', y: '-16', color: 'bg-gold' },
-  { name: 'Redstone', y: '-59', color: 'bg-redstone' },
-  { name: 'Lapis', y: '0', color: 'bg-lapis' },
-  { name: 'Rame', y: '48', color: 'bg-accent' },
-];
 
 const Index = () => {
   return (
@@ -100,24 +91,6 @@ const Index = () => {
               <AIChat />
             </div>
 
-            {/* Quick Mineral Reference */}
-            <div className="mb-16">
-              <h2 className="text-center font-bold text-xl text-foreground mb-6">
-                🔶 Livelli Y Ottimali per Minerali
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                {minerals.map((mineral) => (
-                  <div
-                    key={mineral.name}
-                    className="stone-card p-4 text-center hover:border-primary/50 transition-colors"
-                  >
-                    <div className={`w-8 h-8 rounded mx-auto mb-2 ${mineral.color}`} />
-                    <p className="font-semibold text-foreground">{mineral.name}</p>
-                    <p className="text-2xl font-bold text-primary">Y {mineral.y}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             {/* Section Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
