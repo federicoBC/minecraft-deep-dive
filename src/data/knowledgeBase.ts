@@ -3858,6 +3858,698 @@ export const knowledgeBase: InfoItem[] = [
       'Distrugge quasi tutto! Sotto 50% HP: armor, immune a frecce, solo melee.'
     ],
     keywords: ['wither', 'spawn', 'danno', 'dove trovo', 'boss', 'nether star', 'beacon', 'skull', 'evocazione']
+  },
+  // === TUTTI I MOB MANCANTI ===
+  {
+    id: 'villager-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Villager - Guida Completa',
+    description: 'NPC essenziale per trading. 15 professioni diverse!',
+    details: [
+      'SPAWN: Villaggi naturali in Plains, Desert, Savanna, Taiga, Snowy, Swamp.',
+      'RIPRODUZIONE: SÌ! Servono letti extra e cibo (pane, carote, patate, barbabietole).',
+      'DANNO: NON ATTACCA MAI. Completamente passivo.',
+      'HP: 20 (10 cuori). Drop: Niente.',
+      'Professioni: Armorer, Butcher, Cartographer, Cleric, Farmer, Fisherman, Fletcher, Leatherworker, Librarian, Mason, Shepherd, Toolsmith, Weaponsmith, Nitwit, Unemployed.',
+      'Assegna professione con blocco lavoro (Lectern=Librarian, Composter=Farmer, etc).',
+      'Sistema gossip: ti odiano se attacchi, prezzi aumentano. Cura zombie villager = -sconto permanente!'
+    ],
+    keywords: ['villager', 'spawn', 'danno', 'dove trovo', 'villaggio', 'trading', 'professioni', 'riproduzione', 'breed']
+  },
+  {
+    id: 'iron-golem-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Iron Golem - Guida Completa',
+    description: 'Protettore dei villaggi. FORTISSIMO! Ottimo per farm.',
+    details: [
+      'SPAWN: Naturale nei villaggi (1 ogni 10 villager + 21 letti). Craftabile: 4 Iron Block + Pumpkin.',
+      'RIPRODUZIONE: NON può. Solo spawn naturale o crafting.',
+      'DANNO: 7.5-21.5 (!!) + Knockback alto. One-shot la maggior parte dei mob!',
+      'HP: 100 (50 cuori). Drop: 3-5 Iron Ingot, 0-2 Poppy.',
+      'Neutrale verso player SE craftato da te o spawn naturale non-villaggio.',
+      'Aggro se attacchi villager o lui. Mai aggro su creeper!',
+      'Si cura con Iron Ingot (25 HP per lingotto).'
+    ],
+    keywords: ['iron golem', 'golem', 'spawn', 'danno', 'dove trovo', 'ferro', 'farm', 'villaggio', 'protezione']
+  },
+  {
+    id: 'slime-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Slime - Guida Completa',
+    description: 'Si divide in piccoli! Spawn in slime chunk o swamp.',
+    details: [
+      'SPAWN: Slime Chunk (sotto Y 40) O Swamp biome (Y 51-69, notte, luna)',
+      'RIPRODUZIONE: NON può. Si divide quando muore (3 più piccoli).',
+      'DANNO: Big=4, Medium=2, Small=0 (non fa danno!)',
+      'HP: Big=16, Medium=4, Small=1. Drop: Slimeball (solo small).',
+      'Slime chunk: 1/10 chunk è slime chunk (usa seed finder).',
+      'Swamp: spawn rate dipende da fase lunare (full moon = max).'
+    ],
+    keywords: ['slime', 'spawn', 'danno', 'dove trovo', 'slimeball', 'swamp', 'chunk', 'palude', 'luna']
+  },
+  {
+    id: 'phantom-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Phantom - Guida Completa',
+    description: 'Spawn se NON dormi per 3+ giorni. Vola e attacca!',
+    details: [
+      'SPAWN: Sopra player che NON ha dormito 3+ giorni, notte, cielo aperto.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2-6 (scala con difficoltà). Attacco in picchiata.',
+      'HP: 20 (10 cuori). Drop: Phantom Membrane (0-2).',
+      'Membrane usate per: Slow Falling potion, riparare Elytra!',
+      'Evitali: dormi ogni 3 giorni o stai sotto blocchi solidi di notte.',
+      'Brucia al sole! Aspetta il giorno.'
+    ],
+    keywords: ['phantom', 'spawn', 'danno', 'dove trovo', 'dormire', 'sleep', 'membrane', 'elytra', 'volo']
+  },
+  {
+    id: 'witch-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Strega (Witch) - Guida Completa',
+    description: 'Usa pozioni! Difficile da uccidere. Droppa ingredienti.',
+    details: [
+      'SPAWN: Witch Hut (swamp), notte ovunque, villager colpito da fulmine.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Pozioni! Poison, Harming, Slowness, Weakness. ~6 damage/potion.',
+      'HP: 26 (13 cuori). Drop: Glass Bottle, Glowstone, Gunpowder, Redstone, Spider Eye, Sugar, Stick.',
+      'Si cura bevendo Health/Regen potion! Difficile da uccidere a distanza.',
+      'Counter: vai in melee veloce, non darle tempo di bere/lanciare.'
+    ],
+    keywords: ['witch', 'strega', 'spawn', 'danno', 'dove trovo', 'pozioni', 'swamp', 'hut']
+  },
+  {
+    id: 'pillager-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Pillager - Guida Completa',
+    description: 'Illager con balestra. Uccidi capitano = Raid!',
+    details: [
+      'SPAWN: Pillager Outpost, Patrol (notte), Raid.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Crossbow 3-5 (ranged). Lento a ricaricare.',
+      'HP: 24 (12 cuori). Drop: Crossbow, Arrow, Emerald (raid), Ominous Bottle.',
+      'CAPITANO: Ha banner, ucciderlo dà Bad Omen → Raid se entri in villaggio!',
+      'Outpost spawna infiniti pillager, ottimo per raid farm.'
+    ],
+    keywords: ['pillager', 'spawn', 'danno', 'dove trovo', 'raid', 'outpost', 'capitano', 'banner', 'balestra']
+  },
+  {
+    id: 'vindicator-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Vindicator - Guida Completa',
+    description: 'Illager con ascia. DANNO ALTISSIMO!',
+    details: [
+      'SPAWN: Woodland Mansion, Raid (wave 2+).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 7-19 (!!) Iron Axe. Tra i mob più pericolosi!',
+      'HP: 24 (12 cuori). Drop: Emerald, Iron Axe (raro).',
+      'Corre veloce verso di te. Shield essenziale!',
+      'Nel Raid può aprire porte. "Johnny" name tag = attacca tutto!'
+    ],
+    keywords: ['vindicator', 'spawn', 'danno', 'dove trovo', 'mansion', 'raid', 'ascia', 'illager']
+  },
+  {
+    id: 'evoker-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Evoker - Guida Completa',
+    description: 'Illager mago. Evoca Vex e Fang! Droppa Totem!',
+    details: [
+      'SPAWN: Woodland Mansion, Raid (wave 5+).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Fangs 6 (linea a terra). Vex ~9 cumulativo.',
+      'HP: 24 (12 cuori). Drop: TOTEM OF UNDYING (sempre!), Emerald.',
+      'Fangs ignorano armatura! Evita stando in aria/acqua.',
+      'Uccidilo PRIMA che evochi troppi Vex.'
+    ],
+    keywords: ['evoker', 'spawn', 'danno', 'dove trovo', 'totem', 'undying', 'mansion', 'raid', 'vex', 'fang']
+  },
+  {
+    id: 'vex-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Vex - Guida Completa',
+    description: 'Piccolo spirito evocato. Passa attraverso blocchi!',
+    details: [
+      'SPAWN: Evocato da Evoker (2-4 per spell).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 5-13 con spada. Passa attraverso QUALSIASI blocco!',
+      'HP: 14 (7 cuori). Drop: Niente.',
+      'Muore dopo 30-119 secondi naturalmente.',
+      'Target prioritario: uccidi Evoker, poi aspetta che Vex muoiano.'
+    ],
+    keywords: ['vex', 'spawn', 'danno', 'dove trovo', 'evoker', 'blocchi', 'fantasma', 'spirito']
+  },
+  {
+    id: 'ravager-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Ravager - Guida Completa',
+    description: 'Bestia da Raid. DEVASTANTE! 100 HP!',
+    details: [
+      'SPAWN: Solo Raid (wave 3+). Può avere rider (Pillager/Vindicator/Evoker).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 7-18 + Knockback enorme. Roar stun 2 sec!',
+      'HP: 100 (50 cuori). Drop: Saddle (sempre), Ominous Bottle.',
+      'Distrugge crops e foglie camminando.',
+      'Shield = Roar stun. Senza shield, kita e colpisci.'
+    ],
+    keywords: ['ravager', 'spawn', 'danno', 'dove trovo', 'raid', 'bestia', 'stun', 'roar']
+  },
+  {
+    id: 'magma-cube-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Magma Cube - Guida Completa',
+    description: 'Slime del Nether! Immune al fuoco, salta alto.',
+    details: [
+      'SPAWN: Nether (specialmente Basalt Deltas). Nether Fortress.',
+      'RIPRODUZIONE: NON può. Si divide come slime (3 più piccoli).',
+      'DANNO: Big=6, Medium=4, Small=3.',
+      'HP: Big=16, Medium=4, Small=1. Drop: Magma Cream (solo small).',
+      'Salta molto più alto dello slime normale!',
+      'Basalt Deltas = spawn rate altissimo, pericoloso!'
+    ],
+    keywords: ['magma cube', 'spawn', 'danno', 'dove trovo', 'nether', 'basalt', 'cream', 'slime']
+  },
+  {
+    id: 'husk-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Husk - Guida Completa',
+    description: 'Zombie del deserto. Dà Hunger effect!',
+    details: [
+      'SPAWN: Desert biome (superficie, notte). Sostituisce zombie.',
+      'RIPRODUZIONE: NON può. Può convertirsi in zombie se in acqua.',
+      'DANNO: 2.5-4 + HUNGER effect per 7 sec × hit!',
+      'HP: 20 (10 cuori). Drop: Come zombie + Sand (raro).',
+      'NON brucia al sole! Più pericoloso dello zombie normale.',
+      'Hunger effect = barra fame scende veloce.'
+    ],
+    keywords: ['husk', 'spawn', 'danno', 'dove trovo', 'desert', 'deserto', 'hunger', 'zombie']
+  },
+  {
+    id: 'stray-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Stray - Guida Completa',
+    description: 'Scheletro ghiacciato. Frecce con Slowness!',
+    details: [
+      'SPAWN: Snowy biome (superficie). Sostituisce skeleton.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2-5 + SLOWNESS 30 sec! Rende difficile fuggire.',
+      'HP: 20 (10 cuori). Drop: Arrow, Bone, Arrow of Slowness (50%).',
+      'NON brucia al sole! Counter: shield o close combat veloce.',
+      'Frecce slowness utili per farm.'
+    ],
+    keywords: ['stray', 'spawn', 'danno', 'dove trovo', 'snow', 'neve', 'slowness', 'scheletro', 'frecce']
+  },
+  {
+    id: 'silverfish-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Silverfish - Guida Completa',
+    description: 'Si nasconde nei blocchi! Stronghold e Mountains.',
+    details: [
+      'SPAWN: Infested Stone in Stronghold, Mountains, Igloo basement.',
+      'RIPRODUZIONE: NON può. Chiama altri silverfish se attaccato!',
+      'DANNO: 1 (mezzo cuore). Fastidioso, non pericoloso.',
+      'HP: 8 (4 cuori). Drop: Niente.',
+      'ATTENZIONE: attaccarne uno risveglia TUTTI quelli vicini!',
+      'One-shot consigliato per evitare chain reaction.'
+    ],
+    keywords: ['silverfish', 'spawn', 'danno', 'dove trovo', 'stronghold', 'infested', 'stone', 'montagna']
+  },
+  {
+    id: 'endermite-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Endermite - Guida Completa',
+    description: '5% chance spawn da Ender Pearl. Odiato dagli Enderman!',
+    details: [
+      'SPAWN: 5% chance quando usi Ender Pearl.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2 (1 cuore). Debole ma fastidioso.',
+      'HP: 8 (4 cuori). Drop: Niente (solo XP).',
+      'ENDERMAN LO ATTACCANO! Usato nelle Enderman farm.',
+      'Despawna dopo 2 minuti. Name tag per renderlo permanente.'
+    ],
+    keywords: ['endermite', 'spawn', 'danno', 'dove trovo', 'enderman', 'farm', 'pearl', 'ender']
+  },
+  {
+    id: 'shulker-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Shulker - Guida Completa',
+    description: 'End City mob. Bullet dà Levitation! Droppa Shell.',
+    details: [
+      'SPAWN: End City (si attaccano ai blocchi).',
+      'RIPRODUZIONE: SÌ! Hit da bullet su altro shulker = chance spawn nuovo.',
+      'DANNO: Bullet 4 + LEVITATION 10 sec! Cadi = morte!',
+      'HP: 30 (15 cuori) + armor quando chiuso. Drop: Shulker Shell (50%).',
+      'Shell + Chest = Shulker Box (storage essenziale!).',
+      'Timing: attacca quando aperto. Bullet segue, usa blocchi.'
+    ],
+    keywords: ['shulker', 'spawn', 'danno', 'dove trovo', 'end city', 'shell', 'box', 'levitation']
+  },
+  {
+    id: 'dolphin-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Delfino - Guida Completa',
+    description: 'Ti dà speed boost in acqua! Trova tesori.',
+    details: [
+      'SPAWN: Ocean (non frozen). Gruppi di 3-5.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2.5-3 SE attaccato. Altrimenti amichevole.',
+      'HP: 10 (5 cuori). Drop: Raw Cod (0-1).',
+      'Dolphin\'s Grace: nuota vicino = +speed enorme!',
+      'Dagli cod crudo → ti guida verso tesoro/struttura!'
+    ],
+    keywords: ['dolphin', 'delfino', 'spawn', 'danno', 'dove trovo', 'ocean', 'speed', 'tesoro', 'grace']
+  },
+  {
+    id: 'turtle-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Tartaruga - Guida Completa',
+    description: 'Depone uova sulla spiaggia. Scute per helmet!',
+    details: [
+      'SPAWN: Beach (sabbia, luce). Ricorda la spiaggia di nascita.',
+      'RIPRODUZIONE: SÌ! Seagrass. Torna alla home beach per deporre.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 30 (15 cuori). Drop: Seagrass, Scute (da baby che cresce).',
+      '5 Scute = Turtle Helmet (+10 sec Water Breathing).',
+      'Uova: 4 stage, solo notte. Zombie le attaccano!'
+    ],
+    keywords: ['turtle', 'tartaruga', 'spawn', 'danno', 'dove trovo', 'beach', 'scute', 'helmet', 'egg', 'uova']
+  },
+  {
+    id: 'panda-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Panda - Guida Completa',
+    description: 'Bamboo jungle! 7 personalità diverse.',
+    details: [
+      'SPAWN: Bamboo Jungle (raro!).',
+      'RIPRODUZIONE: SÌ! Bamboo, ma servono 8+ bamboo vicini.',
+      'DANNO: 4-6 SE attaccato (aggressive personality) o mai.',
+      'HP: 20 (10 cuori). Drop: Bamboo (1).',
+      'Personalità: Normal, Lazy, Worried, Playful, Aggressive, Weak, Brown.',
+      'Brown panda = rarissimo (1/1200)!'
+    ],
+    keywords: ['panda', 'spawn', 'danno', 'dove trovo', 'bamboo', 'jungle', 'personalità', 'brown']
+  },
+  {
+    id: 'parrot-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Pappagallo - Guida Completa',
+    description: 'Si siede sulla spalla! Imita suoni mob vicini.',
+    details: [
+      'SPAWN: Jungle (raro). 5 colori.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 6 (3 cuori). Drop: Feather (1-2).',
+      'Tame con semi (NON cookie = lo uccide!).',
+      'Si siede su spalla. Imita suoni mob = warning system!'
+    ],
+    keywords: ['parrot', 'pappagallo', 'spawn', 'danno', 'dove trovo', 'jungle', 'tame', 'spalla', 'shoulder']
+  },
+  {
+    id: 'ocelot-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Ocelot - Guida Completa',
+    description: 'Gatto selvatico. Spaventa Creeper e Phantom!',
+    details: [
+      'SPAWN: Jungle (raro).',
+      'RIPRODUZIONE: SÌ! Raw Cod/Salmon. NON diventa gatto!',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 10 (5 cuori). Drop: Niente.',
+      'Creeper e Phantom scappano da ocelot/gatti!',
+      'Trust: dagli pesce, non diventa pet ma non scappa.'
+    ],
+    keywords: ['ocelot', 'spawn', 'danno', 'dove trovo', 'jungle', 'creeper', 'gatto', 'cat']
+  },
+  {
+    id: 'squid-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Calamaro - Guida Completa',
+    description: 'Comune in acqua. Droppa Ink Sac.',
+    details: [
+      'SPAWN: Qualsiasi acqua Y 46-62.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 10 (5 cuori). Drop: Ink Sac (1-3).',
+      'Ink Sac per: Black Dye, Dark Prismarine, Book and Quill.',
+      'Rilascia nuvola di inchiostro se attaccato.'
+    ],
+    keywords: ['squid', 'calamaro', 'spawn', 'danno', 'dove trovo', 'ink', 'inchiostro', 'sac']
+  },
+  {
+    id: 'glow-squid-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Glow Squid - Guida Completa',
+    description: 'Calamaro luminoso! Glow Ink Sac per sign.',
+    details: [
+      'SPAWN: Underground water (sotto Y 30), totalmente buio.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 10 (5 cuori). Drop: Glow Ink Sac (1-3).',
+      'Glow Ink su Sign = testo luminoso!',
+      'Glow Item Frame = oggetto evidenziato.'
+    ],
+    keywords: ['glow squid', 'spawn', 'danno', 'dove trovo', 'glow', 'ink', 'sign', 'luminoso']
+  },
+  {
+    id: 'bat-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Pipistrello - Guida Completa',
+    description: 'Mob ambientale. Completamente inutile!',
+    details: [
+      'SPAWN: Cave sotto Y 63, luce <4.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 6 (3 cuori). Drop: NIENTE.',
+      'Letteralmente inutile. Solo ambientale.',
+      'Si appende a blocchi capovolto.'
+    ],
+    keywords: ['bat', 'pipistrello', 'spawn', 'danno', 'dove trovo', 'cave', 'grotta', 'inutile']
+  },
+  {
+    id: 'llama-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Lama - Guida Completa',
+    description: 'Sputa! Può portare chest. Caravan mechanic.',
+    details: [
+      'SPAWN: Mountains, Savanna.',
+      'RIPRODUZIONE: SÌ! Hay Bale.',
+      'DANNO: Spit 1. Più che altro fastidioso.',
+      'HP: 15-30 (variabile). Drop: Leather (0-2).',
+      'Chest: 3-15 slot (dipende da strength stat).',
+      'Lead un lama = altri seguono (caravan fino a 10)!'
+    ],
+    keywords: ['llama', 'lama', 'spawn', 'danno', 'dove trovo', 'spit', 'sputo', 'caravan', 'chest']
+  },
+  {
+    id: 'wandering-trader-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Wandering Trader - Guida Completa',
+    description: 'Appare random! Vende item rari.',
+    details: [
+      'SPAWN: Random vicino al player ogni 20 min (despawn dopo 40-60 min).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 20 (10 cuori). Drop: Lama lead (se uccidi).',
+      'Vende: Slimeball, Coral, Saplings rari, Flowers, Nautilus Shell, etc.',
+      'Beve Invisibility potion di notte per proteggersi.'
+    ],
+    keywords: ['wandering trader', 'spawn', 'danno', 'dove trovo', 'trader', 'mercante', 'raro', 'saplings']
+  },
+  {
+    id: 'rabbit-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Coniglio - Guida Completa',
+    description: 'Piccolo e veloce! Killer Bunny variant.',
+    details: [
+      'SPAWN: Desert, Flower Forest, Taiga, Snowy, Meadow.',
+      'RIPRODUZIONE: SÌ! Carrot, Golden Carrot, Dandelion.',
+      'DANNO: NON ATTACCA (tranne Killer Bunny = 8!).',
+      'HP: 3 (1.5 cuori). Drop: Rabbit Hide, Raw Rabbit, Rabbit Foot (10%).',
+      '4 Hide = Leather. Foot per Jump Boost potion.',
+      'Killer Bunny: bianco con occhi rossi, solo commands.'
+    ],
+    keywords: ['rabbit', 'coniglio', 'spawn', 'danno', 'dove trovo', 'foot', 'hide', 'killer bunny']
+  },
+  {
+    id: 'polar-bear-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Orso Polare - Guida Completa',
+    description: 'Neutrale, ma AGGRESSIVO se ha cucciolo!',
+    details: [
+      'SPAWN: Snowy biome, Ice Spikes, Frozen Ocean.',
+      'RIPRODUZIONE: NON può riprodursi (cuccioli spawn naturali).',
+      'DANNO: 4-9. SEMPRE aggro se c\'è baby vicino!',
+      'HP: 30 (15 cuori). Drop: Raw Cod (0-2).',
+      'Nuota bene. Non può essere tamato.',
+      'Baby polar bear = scappa, adulti attaccano!'
+    ],
+    keywords: ['polar bear', 'orso', 'spawn', 'danno', 'dove trovo', 'snow', 'neve', 'arctic', 'baby']
+  },
+  {
+    id: 'goat-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Capra - Guida Completa',
+    description: 'Salta ALTO! Ram attack per Goat Horn!',
+    details: [
+      'SPAWN: Mountains (rocky peaks, slopes).',
+      'RIPRODUZIONE: SÌ! Wheat.',
+      'DANNO: Ram 1-2 + knockback ENORME. Può spingerti giù!',
+      'HP: 10 (5 cuori). Drop: Niente normalmente.',
+      'Goat Horn: droppa se ram contro blocchi duri!',
+      'Screaming Goat (2%): ram più frequente, stesso drop.'
+    ],
+    keywords: ['goat', 'capra', 'spawn', 'danno', 'dove trovo', 'mountain', 'horn', 'ram', 'screaming']
+  },
+  {
+    id: 'frog-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Rana - Guida Completa',
+    description: '3 varianti! Mangia slime/magma per Froglight!',
+    details: [
+      'SPAWN: Swamp, Mangrove Swamp.',
+      'RIPRODUZIONE: SÌ! Slimeball. Depone frogspawn in acqua.',
+      'DANNO: NON ATTACCA player. Mangia small slime/magma cube!',
+      'HP: 10 (5 cuori). Drop: Niente.',
+      '3 tipi: Temperate (orange), Cold (green), Warm (white).',
+      'Froglight: rana mangia small magma cube → blocco luce!'
+    ],
+    keywords: ['frog', 'rana', 'spawn', 'danno', 'dove trovo', 'froglight', 'swamp', 'tadpole', 'slime']
+  },
+  {
+    id: 'tadpole-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Girino - Guida Completa',
+    description: 'Baby frog! Il biome decide il colore.',
+    details: [
+      'SPAWN: Da frogspawn (uova di rana).',
+      'RIPRODUZIONE: NON può (è baby form).',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 6 (3 cuori). Drop: Niente.',
+      'Cresce in rana. Biome dove cresce = colore rana!',
+      'Bucket of Tadpole per trasportarlo.'
+    ],
+    keywords: ['tadpole', 'girino', 'spawn', 'danno', 'dove trovo', 'frog', 'rana', 'biome', 'bucket']
+  },
+  {
+    id: 'strider-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Strider - Guida Completa',
+    description: 'Cammina sulla lava! Mount del Nether.',
+    details: [
+      'SPAWN: Lava lakes nel Nether.',
+      'RIPRODUZIONE: SÌ! Warped Fungus.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 20 (10 cuori). Drop: String (2-5).',
+      'Saddle + Warped Fungus on Stick = cavalcalo sulla lava!',
+      'Trema e diventa viola fuori dalla lava (rallenta).'
+    ],
+    keywords: ['strider', 'spawn', 'danno', 'dove trovo', 'nether', 'lava', 'mount', 'cavalcare', 'warped']
+  },
+  {
+    id: 'zoglin-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Zoglin - Guida Completa',
+    description: 'Hoglin zombificato! Attacca TUTTO.',
+    details: [
+      'SPAWN: Hoglin nell\'Overworld/End dopo 15 sec.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 3-8 + knockback. Attacca TUTTI i mob!',
+      'HP: 40 (20 cuori). Drop: Rotten Flesh (1-3).',
+      'Non può essere bred. Attacca tutto tranne creeper/altri zoglin.',
+      'Non scappa da warped fungus (diverso da hoglin).'
+    ],
+    keywords: ['zoglin', 'spawn', 'danno', 'dove trovo', 'hoglin', 'zombie', 'overworld', 'aggressivo']
+  },
+  {
+    id: 'piglin-brute-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Piglin Brute - Guida Completa',
+    description: 'SEMPRE ostile! Ignora gold armor. Bastion guardian.',
+    details: [
+      'SPAWN: Solo Bastion Remnants (non respawn!).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 7-19 con Golden Axe! SEMPRE aggro!',
+      'HP: 50 (25 cuori). Drop: Golden Axe (8.5%).',
+      'NON viene distratto da gold. NON pacifico con gold armor!',
+      'Numero fisso per Bastion, uccidili = Bastion sicuro.'
+    ],
+    keywords: ['piglin brute', 'spawn', 'danno', 'dove trovo', 'bastion', 'gold', 'axe', 'sempre ostile']
+  },
+  {
+    id: 'snow-golem-complete',
+    category: 'mob',
+    subcategory: 'Utility',
+    title: 'Snow Golem - Guida Completa',
+    description: 'Craftabile! Lancia snowball, lascia neve.',
+    details: [
+      'SPAWN: Craftato: 2 Snow Block + Pumpkin (testa).',
+      'RIPRODUZIONE: NON può. Solo crafting.',
+      'DANNO: Snowball 0 (knockback only). 3 a Blaze!',
+      'HP: 4 (2 cuori). Drop: Snowball (0-15).',
+      'Lascia snow layer dove cammina (snow farm!).',
+      'Muore in biomi caldi, pioggia, acqua. Shear per togliere zucca.'
+    ],
+    keywords: ['snow golem', 'spawn', 'danno', 'dove trovo', 'snowball', 'neve', 'craft', 'utility']
+  },
+  {
+    id: 'mooshroom-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Mooshroom - Guida Completa',
+    description: 'Mucca con funghi! Mushroom Island only.',
+    details: [
+      'SPAWN: SOLO Mushroom Island biome.',
+      'RIPRODUZIONE: SÌ! Wheat (come mucca normale).',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 10 (5 cuori). Drop: Come mucca + Mushroom se sheared.',
+      'Bowl su mooshroom = Mushroom Stew infinito!',
+      'Shear = diventa mucca normale. Fulmine = cambia colore (red↔brown).'
+    ],
+    keywords: ['mooshroom', 'spawn', 'danno', 'dove trovo', 'mushroom', 'island', 'stew', 'fungo']
+  },
+  {
+    id: 'fox-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Volpe - Guida Completa',
+    description: 'Notturna, ruba item! Baby trust player.',
+    details: [
+      'SPAWN: Taiga, Snowy Taiga, Grove. Notturna.',
+      'RIPRODUZIONE: SÌ! Sweet Berries. Baby di genitori bred = ti segue!',
+      'DANNO: 2 ai polli. Scappa dal player (adulti).',
+      'HP: 10 (5 cuori). Drop: Item che teneva in bocca.',
+      'Tiene item in bocca (incluso totem = può auto-res!).',
+      'Snow fox in snowy taiga (bianco).'
+    ],
+    keywords: ['fox', 'volpe', 'spawn', 'danno', 'dove trovo', 'taiga', 'berry', 'trust', 'item']
+  },
+  {
+    id: 'donkey-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Asino - Guida Completa',
+    description: 'Può portare chest! Breed con cavallo = mulo.',
+    details: [
+      'SPAWN: Plains, Savanna (raro, più raro del cavallo).',
+      'RIPRODUZIONE: SÌ! Golden Apple/Carrot.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 15-30. Drop: Leather (0-2).',
+      'Chest = 15 slot storage mobile!',
+      'Donkey + Horse = Mule (non può riprodursi).'
+    ],
+    keywords: ['donkey', 'asino', 'spawn', 'danno', 'dove trovo', 'chest', 'mule', 'mulo']
+  },
+  {
+    id: 'mule-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Mulo - Guida Completa',
+    description: 'Horse + Donkey. Chest ma sterile.',
+    details: [
+      'SPAWN: Solo breeding Horse + Donkey.',
+      'RIPRODUZIONE: NON può riprodursi (sterile!).',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: Media tra genitori. Drop: Leather (0-2).',
+      'Può avere chest come asino.',
+      'Buon compromesso tra velocità e storage.'
+    ],
+    keywords: ['mule', 'mulo', 'spawn', 'danno', 'dove trovo', 'horse', 'donkey', 'chest', 'breed']
+  },
+  {
+    id: 'skeleton-horse-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Skeleton Horse - Guida Completa',
+    description: 'Raro! Spawn da trap durante temporale.',
+    details: [
+      'SPAWN: Skeleton Trap durante temporale (fulmine su cavallo).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 15 (7.5 cuori). Drop: Bone (0-2).',
+      'Può andare sott\'acqua! Già domato dopo trap.',
+      'Non ha bisogno di cibo. Raro ma permanente.'
+    ],
+    keywords: ['skeleton horse', 'cavallo scheletro', 'spawn', 'danno', 'dove trovo', 'trap', 'temporale', 'underwater']
+  },
+  {
+    id: 'zombie-horse-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Zombie Horse - Guida Completa',
+    description: 'NON spawna naturalmente! Solo commands.',
+    details: [
+      'SPAWN: Solo commands (/summon zombie_horse).',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: NON ATTACCA MAI.',
+      'HP: 15 (7.5 cuori). Drop: Rotten Flesh (0-2).',
+      'Può essere cavalcato ma serve comando per tame.',
+      'Non esiste in survival vanilla!'
+    ],
+    keywords: ['zombie horse', 'cavallo zombie', 'spawn', 'danno', 'dove trovo', 'command', 'creative']
+  },
+  {
+    id: 'bogged-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Bogged - Guida Completa (1.21)',
+    description: 'Scheletro palude! Frecce con Poison.',
+    details: [
+      'SPAWN: Swamp, Mangrove Swamp (1.21+). Trial Chambers.',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2-5 + POISON! Frecce avvelenate.',
+      'HP: 16 (8 cuori). Drop: Arrow, Bone, Arrow of Poison (50%).',
+      'Più lento dello skeleton normale ma più pericoloso.',
+      'Poison effect ti porta a 1 HP!'
+    ],
+    keywords: ['bogged', 'spawn', 'danno', 'dove trovo', 'swamp', 'poison', 'scheletro', '1.21', 'trial']
+  },
+  {
+    id: 'armadillo-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Armadillo - Guida Completa (1.21)',
+    description: 'Nuovo mob! Droppa Scute per Wolf Armor.',
+    details: [
+      'SPAWN: Savanna, Badlands (1.21+).',
+      'RIPRODUZIONE: SÌ! Spider Eye.',
+      'DANNO: NON ATTACCA MAI. Si arrotola se spaventato.',
+      'HP: 12 (6 cuori). Drop: Armadillo Scute (brush).',
+      '6 Scute = Wolf Armor! Protegge i tuoi lupi.',
+      'Usa brush per ottenere scute senza uccidere.'
+    ],
+    keywords: ['armadillo', 'spawn', 'danno', 'dove trovo', 'scute', 'wolf armor', 'savanna', '1.21', 'brush']
   }
 ];
 
