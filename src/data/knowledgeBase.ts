@@ -3541,6 +3541,323 @@ export const knowledgeBase: InfoItem[] = [
       'Mappa il Nether roof per viaggi sicuri'
     ],
     keywords: ['nether', 'travel', 'viaggio', 'veloce', 'fast', 'ice', 'boat', '8x']
+  },
+
+  // === MOB COMPLETI - SPAWN, RIPRODUZIONE, DANNO ===
+  {
+    id: 'cow-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Mucca - Guida Completa',
+    description: 'La mucca è un mob passivo che fornisce latte, carne e cuoio.',
+    details: [
+      'SPAWN: Biomi con erba (plains, forest, taiga), light level 9+, gruppi di 2-3',
+      'RIPRODUZIONE: Nutri 2 mucche con wheat. Cooldown 5 minuti.',
+      'DANNO: NON può fare danno. Completamente passiva.',
+      'HP: 10 (5 cuori). Drop: Raw Beef (1-3), Leather (0-2)',
+      'Può essere munta con bucket vuoto per latte (rimuove effetti)'
+    ],
+    keywords: ['mucca', 'cow', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'latte', 'milk', 'beef', 'leather']
+  },
+  {
+    id: 'pig-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Maiale - Guida Completa',
+    description: 'Il maiale fornisce carne ed è cavalcabile con sella.',
+    details: [
+      'SPAWN: Biomi con erba, light level 9+, gruppi di 1-3',
+      'RIPRODUZIONE: Nutri 2 maiali con carrot, potato o beetroot.',
+      'DANNO: NON può fare danno.',
+      'HP: 10 (5 cuori). Drop: Raw Porkchop (1-3)',
+      'Cavalcabile con saddle + carrot on stick. Se colpito da fulmine → Zombified Piglin'
+    ],
+    keywords: ['maiale', 'pig', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'porkchop', 'cavalcare']
+  },
+  {
+    id: 'sheep-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Pecora - Guida Completa',
+    description: 'La pecora fornisce lana (tosabile) e carne.',
+    details: [
+      'SPAWN: Biomi con erba, light 9+. Colori: bianco 82%, nero/grigio/marrone 5%, rosa 0.16%',
+      'RIPRODUZIONE: Nutri 2 pecore con wheat. Baby eredita colore mix.',
+      'DANNO: NON può fare danno.',
+      'HP: 8 (4 cuori). Drop: Wool (1), Raw Mutton (1-2)',
+      'Tosabile con shears (1-3 lana). Rigenera mangiando erba. Tingibile con dye.'
+    ],
+    keywords: ['pecora', 'sheep', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'lana', 'wool', 'colore', 'shears']
+  },
+  {
+    id: 'chicken-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Pollo - Guida Completa',
+    description: 'Il pollo fornisce uova, piume e carne. Immune al fall damage.',
+    details: [
+      'SPAWN: Biomi con erba, light 9+. Anche da uova lanciate (1/8 chance)',
+      'RIPRODUZIONE: Nutri 2 polli con qualsiasi seed.',
+      'DANNO: NON può fare danno.',
+      'HP: 4 (2 cuori). Drop: Raw Chicken (1), Feather (0-2)',
+      'Depone 1 uovo ogni 5-10 min. Plana lentamente (no fall damage).'
+    ],
+    keywords: ['pollo', 'chicken', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'uova', 'egg', 'piume', 'feather']
+  },
+  {
+    id: 'horse-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Cavallo - Guida Completa',
+    description: 'Il cavallo è il mount più versatile, stats variabili.',
+    details: [
+      'SPAWN: Plains e savanna, branchi di 2-6',
+      'RIPRODUZIONE: Nutri 2 cavalli DOMATI con golden apple o golden carrot.',
+      'DANNO: NON può fare danno.',
+      'HP: 15-30 variabile. Velocità: 4.7-14.2 blocchi/sec. Salto: 1-5 blocchi',
+      'Addomesticamento: monta ripetutamente fino a cuori. Equipaggia saddle per controllare.'
+    ],
+    keywords: ['cavallo', 'horse', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'cavalcare', 'domare', 'tame', 'mount']
+  },
+  {
+    id: 'wolf-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Lupo - Guida Completa',
+    description: 'Il lupo è addomesticabile e diventa alleato fedele.',
+    details: [
+      'SPAWN: Forest, taiga, snowy taiga, grove. Branchi di 4.',
+      'RIPRODUZIONE: Nutri 2 lupi DOMATI con qualsiasi carne.',
+      'DANNO: Selvatico se provocato: 3-4. Domato: 4 danni.',
+      'HP: Selvatico 8, Domato 20. Cura con carne!',
+      'Addomesticabile con bones (1-12 necessari). Attacca chi attacchi.'
+    ],
+    keywords: ['lupo', 'wolf', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'domare', 'tame', 'cane', 'dog', 'bone']
+  },
+  {
+    id: 'cat-complete',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Gatto - Guida Completa',
+    description: 'Il gatto spaventa creeper e phantom!',
+    details: [
+      'SPAWN: Villaggi (1 ogni 4 letti), witch hut (nero)',
+      'RIPRODUZIONE: Nutri 2 gatti DOMATI con raw cod o salmon.',
+      'DANNO: NON può fare danno.',
+      'HP: 10 (5 cuori). 11 varianti colore.',
+      'Addomesticabile con raw cod/salmon (sneaka per avvicinarti). Creeper/Phantom scappano!'
+    ],
+    keywords: ['gatto', 'cat', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'domare', 'tame', 'creeper', 'phantom']
+  },
+  {
+    id: 'bee-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Ape - Guida Completa',
+    description: 'L\'ape produce miele e impollina crop.',
+    details: [
+      'SPAWN: Beehive/nest in plains, flower forest, etc.',
+      'RIPRODUZIONE: Nutri 2 api con qualsiasi fiore.',
+      'DANNO: Se provocata: 1-4 + veleno. Muore dopo aver punto.',
+      'HP: 10 (5 cuori). Impollina 10 fiori prima di tornare.',
+      'Campfire sotto nest = api non si arrabbiano quando raccogli miele.'
+    ],
+    keywords: ['ape', 'bee', 'spawn', 'riproduzione', 'breeding', 'dove trovo', 'miele', 'honey', 'puntura', 'veleno']
+  },
+  {
+    id: 'zombie-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Zombie - Guida Completa',
+    description: 'Lo zombie è il mob ostile più comune. Brucia al sole.',
+    details: [
+      'SPAWN: Ovunque Overworld a light level 0, dungeon spawner',
+      'RIPRODUZIONE: NON può. Converte villager in zombie villager.',
+      'DANNO: 2.5 (Easy), 3 (Normal), 4.5 (Hard)',
+      'HP: 20 (10 cuori). Drop: Rotten Flesh, raramente Iron/Carrot/Potato',
+      'Brucia al sole. Può raccogliere armatura. Baby zombie più veloce.'
+    ],
+    keywords: ['zombie', 'spawn', 'danno', 'dove trovo', 'undead', 'rotten flesh', 'brucia', 'sole']
+  },
+  {
+    id: 'skeleton-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Scheletro - Guida Completa',
+    description: 'Lo scheletro è un arciere non-morto.',
+    details: [
+      'SPAWN: Ovunque a light 0, Soul Sand Valley nel Nether',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 1-4 (freccia, varia con distanza e difficoltà)',
+      'HP: 20 (10 cuori). Drop: Bones (0-2), Arrows (0-2), raramente Bow',
+      'Brucia al sole. Strafing AI. Può raccogliere archi migliori.'
+    ],
+    keywords: ['scheletro', 'skeleton', 'spawn', 'danno', 'dove trovo', 'arciere', 'arrow', 'bones', 'freccia']
+  },
+  {
+    id: 'creeper-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Creeper - Guida Completa',
+    description: 'Il creeper esplode. Scappa dai gatti!',
+    details: [
+      'SPAWN: Ovunque Overworld a light level 0',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Esplosione fino a 43 damage point blank! 1.5 sec fuse.',
+      'HP: 20 (10 cuori). Drop: Gunpowder. Se ucciso da skeleton: Music Disc!',
+      'Charged Creeper (fulmine): 2x explosion, fa droppare mob head.'
+    ],
+    keywords: ['creeper', 'spawn', 'danno', 'dove trovo', 'esplosione', 'explosion', 'gunpowder', 'charged', 'gatto']
+  },
+  {
+    id: 'enderman-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Enderman - Guida Completa',
+    description: 'L\'Enderman si teletrasporta. Non guardarlo negli occhi!',
+    details: [
+      'SPAWN: Overworld (raro), End (comune), Warped Forest',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 4.5 (Easy), 7 (Normal), 10.5 (Hard)',
+      'HP: 40 (20 cuori). Drop: Ender Pearl (0-1)',
+      'Aggro se lo guardi. Prende danno da acqua/pioggia. Zucca in testa = safe.'
+    ],
+    keywords: ['enderman', 'spawn', 'danno', 'dove trovo', 'ender pearl', 'teleport', 'end', 'aggro', 'occhi']
+  },
+  {
+    id: 'spider-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Ragno - Guida Completa',
+    description: 'Il ragno scala i muri! Neutrale di giorno.',
+    details: [
+      'SPAWN: Ovunque a light 0, spawner',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 2-3. Neutrale con light level 12+.',
+      'HP: 16 (8 cuori). Drop: String (0-2), Spider Eye (33%)',
+      'SCALA I MURI! Di giorno non attacca se non provocato.'
+    ],
+    keywords: ['ragno', 'spider', 'spawn', 'danno', 'dove trovo', 'string', 'spider eye', 'climb', 'muro', 'wall']
+  },
+  {
+    id: 'blaze-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Blaze - Guida Completa',
+    description: 'Il Blaze è essenziale per pozioni e Eye of Ender.',
+    details: [
+      'SPAWN: SOLO spawner nelle Nether Fortress',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Melee 6. Fireball 5 + fire (spara 3 alla volta)',
+      'HP: 20 (10 cuori). Drop: Blaze Rod (0-1)',
+      'Immune al fuoco. Snowball fa 3 danni! Blaze Rod per brewing.'
+    ],
+    keywords: ['blaze', 'spawn', 'danno', 'dove trovo', 'nether fortress', 'blaze rod', 'fireball', 'brewing', 'snowball']
+  },
+  {
+    id: 'ghast-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Ghast - Guida Completa',
+    description: 'Il Ghast spara fireball che puoi RESPINGERE!',
+    details: [
+      'SPAWN: Nether (serve 4x4x4 spazio)',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Fireball esplode (potenza piccolo TNT). Respingibile!',
+      'HP: 10 (5 cuori) - sorprendentemente basso!',
+      'Drop: Ghast Tear (0-1), Gunpowder. Ghast Tear per Regen potion.'
+    ],
+    keywords: ['ghast', 'spawn', 'danno', 'dove trovo', 'nether', 'fireball', 'ghast tear', 'respingere', 'reflect']
+  },
+  {
+    id: 'piglin-complete',
+    category: 'mob',
+    subcategory: 'Neutral',
+    title: 'Piglin - Guida Completa',
+    description: 'Il Piglin baratta! Indossa gold armor per non essere attaccato.',
+    details: [
+      'SPAWN: Crimson Forest, Nether Wastes, Bastion',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Sword 5-8, Crossbow 2-5. Aggro se: no gold armor, apri chest, mini gold.',
+      'HP: 16 (8 cuori). BARTERING: lancia gold ingot → item random!',
+      '1 pezzo gold armor = pacifico. Diventa Zombified Piglin in Overworld.'
+    ],
+    keywords: ['piglin', 'spawn', 'danno', 'dove trovo', 'barter', 'baratto', 'gold', 'oro', 'ender pearl', 'nether']
+  },
+  {
+    id: 'wither-skeleton-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Wither Skeleton - Guida Completa',
+    description: 'Droppa skull per evocare il Wither!',
+    details: [
+      'SPAWN: SOLO Nether Fortress su Nether Brick',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: 5-12 + Wither effect (10 sec, drena HP)',
+      'HP: 20 (10 cuori). Drop: Coal, Bone, Skull (2.5%, 5.5% con Looting III)',
+      'Alto 2.4 blocchi (usabile per filtro). Servono 3 skull per Wither.'
+    ],
+    keywords: ['wither skeleton', 'spawn', 'danno', 'dove trovo', 'skull', 'wither', 'nether fortress']
+  },
+  {
+    id: 'drowned-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Drowned - Guida Completa',
+    description: 'Lo zombie acquatico. Può avere TRIDENTE!',
+    details: [
+      'SPAWN: Ocean, river, dripstone cave. Zombie in acqua 30s → Drowned.',
+      'RIPRODUZIONE: NON può. Zombie si converte.',
+      'DANNO: Melee 2.5-3. Trident throw: 8!',
+      'HP: 20 (10 cuori). Drop: Rotten Flesh, Copper (11%), Trident (6.25% se lo tiene)',
+      'Solo drowned SPAWNED con tridente possono dropparlo, non convertiti!'
+    ],
+    keywords: ['drowned', 'spawn', 'danno', 'dove trovo', 'trident', 'tridente', 'ocean', 'zombie', 'copper']
+  },
+  {
+    id: 'guardian-complete',
+    category: 'mob',
+    subcategory: 'Hostile',
+    title: 'Guardian - Guida Completa',
+    description: 'Il Guardian usa laser. Ottima XP farm!',
+    details: [
+      'SPAWN: SOLO area Ocean Monument',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Laser 4-6 (2 sec carica). Spike 2 se attacchi in melee.',
+      'HP: 30 (15 cuori). Drop: Prismarine Shard/Crystal, Cod, molto XP!',
+      'Rompi line of sight per resettare laser. Farm = 100k+ XP/hr.'
+    ],
+    keywords: ['guardian', 'spawn', 'danno', 'dove trovo', 'ocean monument', 'laser', 'prismarine', 'xp farm']
+  },
+  {
+    id: 'warden-complete',
+    category: 'mob',
+    subcategory: 'Boss',
+    title: 'Warden - Guida Completa',
+    description: 'IL MOB PIÙ FORTE! Non combatterlo, SCAPPA!',
+    details: [
+      'SPAWN: Sculk Shrieker dopo 4 attivazioni (10 min)',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Melee 16-45(!). Sonic Boom 10 (IGNORA ARMATURA!)',
+      'HP: 500 (250 cuori!) - PIÙ DEL WITHER!',
+      'È CIECO - usa suono/odore. Sneaka, usa wool, distrailo con proiettili. NON COMBATTERE!'
+    ],
+    keywords: ['warden', 'spawn', 'danno', 'dove trovo', 'deep dark', 'sculk', 'shrieker', 'sonic boom', 'cieco']
+  },
+  {
+    id: 'wither-boss-complete',
+    category: 'mob',
+    subcategory: 'Boss',
+    title: 'Wither - Guida Completa',
+    description: 'Boss evocato che droppa Nether Star per Beacon.',
+    details: [
+      'SPAWN: Evocato con 4 Soul Sand + 3 Wither Skull (forma T)',
+      'RIPRODUZIONE: NON può riprodursi.',
+      'DANNO: Skull 5-12 + Wither II. Dash 15!',
+      'HP: 300 (150 cuori). Drop: Nether Star (sempre)',
+      'Distrugge quasi tutto! Sotto 50% HP: armor, immune a frecce, solo melee.'
+    ],
+    keywords: ['wither', 'spawn', 'danno', 'dove trovo', 'boss', 'nether star', 'beacon', 'skull', 'evocazione']
   }
 ];
 
