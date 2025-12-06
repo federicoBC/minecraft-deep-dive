@@ -13,6 +13,10 @@ export interface InfoItem {
   difficulty?: 'Noob' | 'Pro' | 'Master' | 'Legend';
   table?: { headers: string[]; rows: string[][] };
   keywords: string[];
+  // Media support
+  images?: { url: string; caption: string }[];
+  videoUrl?: string; // YouTube embed URL
+  steps?: { step: number; title: string; description: string; imageUrl?: string }[];
 }
 
 export const knowledgeBase: InfoItem[] = [
@@ -731,6 +735,16 @@ export const knowledgeBase: InfoItem[] = [
       'Troppo lontano = mob despawnano',
       'Luce residua blocca lo spawn'
     ],
+    videoUrl: 'https://www.youtube.com/embed/y0yd2LRxlBM',
+    steps: [
+      { step: 1, title: 'Scegli la Posizione', description: 'Costruisci sopra un oceano a Y 200+ per massimizzare le rate. Più sei alto, meglio è.' },
+      { step: 2, title: 'Costruisci le Piattaforme', description: 'Crea 4-8 piattaforme di spawning 15x15, distanziate 2-3 blocchi in verticale.' },
+      { step: 3, title: 'Aggiungi le Trapdoor', description: 'Posiziona trapdoor aperte sul soffitto di ogni piattaforma. I creeper (1.7 blocchi) passano, gli altri mob no.' },
+      { step: 4, title: 'Carpet Anti-Spider', description: 'Metti carpet in pattern a scacchiera per bloccare lo spawn degli spider.' },
+      { step: 5, title: 'Sistema di Acqua', description: 'Usa acqua corrente per portare i creeper al centro verso la caduta.' },
+      { step: 6, title: 'Killing Chamber', description: 'Crea una camera di uccisione con caduta di 24 blocchi o usa le campanelle per ucciderli.' },
+      { step: 7, title: 'Collezione Items', description: 'Posiziona hopper e chest per raccolta automatica di gunpowder.' }
+    ],
     keywords: ['creeper', 'farm', 'gunpowder', 'polvere da sparo', 'tnt', 'trapdoor']
   },
   {
@@ -758,6 +772,16 @@ export const knowledgeBase: InfoItem[] = [
       'Altra farm troppo vicina',
       'Postazioni lavoro rubate da altri villager'
     ],
+    videoUrl: 'https://www.youtube.com/embed/0L_optIDhKo',
+    steps: [
+      { step: 1, title: 'Prepara i Materiali', description: 'Raccogli: 3+ villager, 3 letti, 3 postazioni lavoro (composter consigliato), building blocks, vetro, lava bucket, hopper, chest, name tag.' },
+      { step: 2, title: 'Costruisci la Piattaforma', description: 'Crea una piattaforma 9x9 a 8+ blocchi dal suolo. I golem spawneranno qui e cadranno.' },
+      { step: 3, title: 'Zona Villager', description: 'Costruisci un\'area 3x3 al centro per i villager con 3 letti e 3 postazioni lavoro.' },
+      { step: 4, title: 'Posiziona lo Zombie', description: 'Cattura uno zombie in un minecart o barca. Posizionalo dove i villager possono vederlo ma non raggiungerlo.' },
+      { step: 5, title: 'Name Tag lo Zombie', description: 'Usa un name tag per evitare il despawn dello zombie.' },
+      { step: 6, title: 'Killing Chamber', description: 'Sotto la piattaforma, crea una camera con lava per uccidere i golem e hopper per raccogliere il ferro.' },
+      { step: 7, title: 'Test e Ottimizzazione', description: 'Verifica che i villager si spaventino (guardano lo zombie e si agitano). Dovrebbero spawnare golem ogni 35 secondi.' }
+    ],
     keywords: ['ferro', 'iron', 'farm', 'golem', 'villager', 'automatica']
   },
   {
@@ -778,6 +802,16 @@ export const knowledgeBase: InfoItem[] = [
       'Usa name tag sull\'endermite',
       'Looting III per perle extra'
     ],
+    videoUrl: 'https://www.youtube.com/embed/nh8voJScSbw',
+    steps: [
+      { step: 1, title: 'Raggiungi l\'End', description: 'Uccidi l\'Ender Dragon se non l\'hai già fatto, poi trova un End Gateway.' },
+      { step: 2, title: 'Vai alle Outer Islands', description: 'Entra in un gateway o costruisci un ponte di 1000+ blocchi.' },
+      { step: 3, title: 'Costruisci la Piattaforma', description: 'Crea una grande piattaforma (21x21 minimo) con un buco al centro.' },
+      { step: 4, title: 'Ottieni un\'Endermite', description: 'Lancia Ender Pearl finché non spawna un\'Endermite (5% chance).' },
+      { step: 5, title: 'Intrappola l\'Endermite', description: 'Metti l\'Endermite in un minecart e usa un name tag. Posizionala al centro su un blocco alto.' },
+      { step: 6, title: 'Killing Chamber', description: 'Gli enderman cadranno per 43 blocchi. Arriveranno a 1 HP, uccidili con un punch.' },
+      { step: 7, title: 'AFK Spot', description: 'Crea un punto AFK sicuro con vista sulla piattaforma.' }
+    ],
     keywords: ['xp', 'enderman', 'farm', 'end', 'esperienza', 'livelli']
   },
   {
@@ -797,6 +831,15 @@ export const knowledgeBase: InfoItem[] = [
       'Looting III aumenta notevolmente il drop',
       'Anche ottima per XP',
       'Porta un\'incudine per riparare Looting sword'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/l9oteFEj770',
+    steps: [
+      { step: 1, title: 'Accedi al Nether Roof', description: 'Usa un glitch con Ender Pearl per salire sul Nether roof a Y 128. Questo aumenta drasticamente le rate.' },
+      { step: 2, title: 'Costruisci le Piattaforme', description: 'Crea piattaforme di spawn in nether brick (per estetica) o qualsiasi solid block.' },
+      { step: 3, title: 'Posiziona Turtle Eggs', description: 'Metti turtle eggs al centro. I Zombified Piglin sono attratti e cercano di romperle.' },
+      { step: 4, title: 'Sistema di Caduta', description: 'Fai cadere i piglin attraverso un buco per danneggiarli.' },
+      { step: 5, title: 'Entity Cramming Kill', description: 'Usa un\'area piccola (1x1) con 24+ mob per kill automatiche tramite entity cramming.' },
+      { step: 6, title: 'Collezione', description: 'Posiziona hopper sotto per raccogliere oro, carne marcia e spade dorate.' }
     ],
     keywords: ['oro', 'gold', 'farm', 'piglin', 'nether', 'xp']
   },
@@ -850,6 +893,16 @@ export const knowledgeBase: InfoItem[] = [
       'Spider spawner = stringhe + spider eye',
       'Usa torce per disattivare temporaneamente'
     ],
+    videoUrl: 'https://www.youtube.com/embed/4fV8qKozFq4',
+    steps: [
+      { step: 1, title: 'Trova il Dungeon', description: 'Cerca dungeon naturali nelle cave. Contengono spawner di zombie, skeleton o spider.' },
+      { step: 2, title: 'Illumina l\'Area', description: 'Posiziona torce sul spawner e intorno per fermare temporaneamente gli spawn.' },
+      { step: 3, title: 'Scava la Camera', description: 'Espandi la stanza a circa 9x9 blocchi centrata sullo spawner.' },
+      { step: 4, title: 'Sistema di Acqua', description: 'Posiziona fonti d\'acqua per spingere i mob verso un angolo.' },
+      { step: 5, title: 'Camera di Caduta', description: 'Crea un drop di 23 blocchi (li porta a mezzo cuore) o usa trident killer.' },
+      { step: 6, title: 'Collezione', description: 'Posiziona hopper e chest sotto il punto di kill.' },
+      { step: 7, title: 'Rimuovi le Torce', description: 'Togli le torce dal spawner per attivare la farm!' }
+    ],
     keywords: ['spawner', 'dungeon', 'farm', 'zombie', 'skeleton', 'xp']
   },
   {
@@ -884,7 +937,60 @@ export const knowledgeBase: InfoItem[] = [
       'TNT per clear automatiche',
       'Totem = sopravvivenza garantita'
     ],
+    videoUrl: 'https://www.youtube.com/embed/LHddoVMxcNA',
+    steps: [
+      { step: 1, title: 'Trova un Outpost', description: 'Localizza un Pillager Outpost per ottenere Bad Omen.' },
+      { step: 2, title: 'Crea il Villaggio', description: 'Posiziona 1 villager con letto e postazione. Questo è il villaggio target.' },
+      { step: 3, title: 'Costruisci la Trappola', description: 'I raider devono essere portati in una killing chamber con acqua/caduta.' },
+      { step: 4, title: 'Sistema AFK', description: 'Crea un punto AFK dove i raid si triggerano automaticamente.' },
+      { step: 5, title: 'Ottieni Bad Omen', description: 'Uccidi il capitano (quello con il banner) per ottenere l\'effetto.' },
+      { step: 6, title: 'Trigghera il Raid', description: 'Avvicinati al villaggio per far partire il raid automaticamente.' }
+    ],
     keywords: ['raid', 'pillager', 'farm', 'totem', 'undying', 'evoker', 'smeraldi']
+  },
+  // === FARM 1.21 ===
+  {
+    id: 'trial-chamber-farm',
+    category: 'farm',
+    subcategory: 'Trial',
+    title: 'Trial Chamber Farm (1.21)',
+    description: 'Le Trial Chamber introdotte nella 1.21 contengono Trial Spawner che generano mob e ricompense uniche.',
+    details: [
+      'Strutture sotterranee tra Y -40 e Y -20',
+      'Contengono Trial Spawner con mob vari',
+      'Drop unici: Trial Key, Wind Charge, Breeze Rod',
+      'I Trial Spawner si resettano dopo un cooldown',
+      'Ominous Trial per loot migliore con Bad Omen'
+    ],
+    tips: [
+      'Porta pozioni di forza e healing',
+      'Il Breeze è il mob nuovo più pericoloso',
+      'Usa Ominous Bottle per Ominous Trial (loot migliore)',
+      'I Vault si aprono con Trial Key'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/wFVYf1bKhC0',
+    keywords: ['trial', 'chamber', 'trial spawner', 'breeze', 'vault', '1.21', 'trial key']
+  },
+  {
+    id: 'breeze-farm',
+    category: 'farm',
+    subcategory: 'Trial',
+    title: 'Breeze Farm - 1.21',
+    description: 'Il Breeze è un nuovo mob della 1.21. Droppa Breeze Rod per craftare Wind Charge.',
+    details: [
+      'Spawna solo nei Trial Spawner nelle Trial Chamber',
+      'Attacco: Wind Charge (spinge il giocatore)',
+      'Drop: 1-2 Breeze Rod',
+      'HP: 30 (15 cuori)',
+      'Può saltare molto in alto e schivare attacchi'
+    ],
+    tips: [
+      'Attacca quando atterra',
+      'Wind Charge crafta con Breeze Rod',
+      'Le Wind Charge lanciate spostano te o i mob',
+      'Utili per il parkour verticale'
+    ],
+    keywords: ['breeze', 'farm', 'wind charge', 'breeze rod', '1.21', 'trial chamber']
   },
 
   // === COMBAT ===
@@ -1053,6 +1159,15 @@ export const knowledgeBase: InfoItem[] = [
       'Pumpkin head per evitare aggro Enderman',
       'Letti esplodono nell\'End = danno massiccio',
       'Porta secchi d\'acqua per emergenze'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/LUCEJz3OGBA',
+    steps: [
+      { step: 1, title: 'Preparazione', description: 'Porta: armatura full diamond/netherite, arco con Power V, spada Sharpness V, slow falling potion, ender pearl, blocchi, letti.' },
+      { step: 2, title: 'Arriva all\'End', description: 'Attiva il portale End nella Stronghold con 12 Eye of Ender.' },
+      { step: 3, title: 'Distruggi i Cristalli', description: 'Usa l\'arco per distruggere i cristalli sulle torri. I cristalli in gabbia richiedono di salire.' },
+      { step: 4, title: 'Evita il Breath', description: 'Quando il drago soffia, allontanati. Puoi raccoglierlo con bottiglie vuote.' },
+      { step: 5, title: 'Attacca al Centro', description: 'Quando il drago scende sulla fontana, colpiscilo con la spada. È il momento di massimo danno.' },
+      { step: 6, title: 'Bed Bombing', description: 'Per speedrun: posiziona letti vicino alla testa del drago e falli esplodere.' }
     ],
     keywords: ['ender dragon', 'drago', 'end', 'boss', 'cristalli', 'fight']
   },
@@ -4550,8 +4665,214 @@ export const knowledgeBase: InfoItem[] = [
       'Usa brush per ottenere scute senza uccidere.'
     ],
     keywords: ['armadillo', 'spawn', 'danno', 'dove trovo', 'scute', 'wolf armor', 'savanna', '1.21', 'brush']
+  },
+  // === NUOVE FEATURES 1.20/1.21 ===
+  {
+    id: 'cherry-grove-biome',
+    category: 'info',
+    subcategory: 'World',
+    title: 'Cherry Grove - Nuovo Bioma (1.20)',
+    description: 'Il Cherry Grove è un bioma montano con alberi di ciliegio rosa introdotto nella 1.20.',
+    details: [
+      'Bioma: montagna a Y 100+',
+      'Cherry Wood: legno rosa unico',
+      'Petali che cadono: particelle decorative',
+      'Mob: conigli, api, pecore, maiali',
+      'Pink Petals: fiore decorativo raccolglibile'
+    ],
+    tips: [
+      'Ottimo per costruzioni estetiche',
+      'I petali cadono come particelle',
+      'Legno rosa per progetti decorativi'
+    ],
+    keywords: ['cherry', 'grove', 'ciliegio', 'bioma', '1.20', 'pink', 'rosa', 'wood', 'legno']
+  },
+  {
+    id: 'armor-trims',
+    category: 'info',
+    subcategory: 'Customization',
+    title: 'Armor Trims - Personalizzazione (1.20)',
+    description: 'Gli Armor Trim permettono di decorare l\'armatura con pattern unici.',
+    details: [
+      'Trovati in: dungeon, temple, strutture varie',
+      'Template + Armatura + Materiale = Trim',
+      'Materiali: Iron, Copper, Gold, Lapis, Emerald, Diamond, Netherite, Redstone, Quartz, Amethyst',
+      'Pattern diversi in strutture diverse',
+      'Duplicabili con 7 diamonds + template'
+    ],
+    tips: [
+      'Coast: Shipwreck',
+      'Dune: Desert Temple',
+      'Eye: Stronghold',
+      'Host: Trail Ruins',
+      'Raiser: Trail Ruins',
+      'Rib: Nether Fortress',
+      'Sentry: Pillager Outpost',
+      'Shaper: Trail Ruins',
+      'Silence: Ancient City',
+      'Snout: Bastion Remnant',
+      'Spire: End City',
+      'Tide: Ocean Monument',
+      'Vex: Woodland Mansion',
+      'Ward: Ancient City',
+      'Wayfinder: Trail Ruins',
+      'Wild: Jungle Temple'
+    ],
+    keywords: ['armor', 'trim', 'template', 'decorazione', 'pattern', '1.20', 'smithing']
+  },
+  {
+    id: 'sniffer-mob',
+    category: 'mob',
+    subcategory: 'Passive',
+    title: 'Sniffer - Mob Archeologico (1.20)',
+    description: 'Lo Sniffer è un mob passivo antico che trova semi di piante decorative.',
+    details: [
+      'SPAWN: NON spawna naturalmente! Devi trovare l\'uovo.',
+      'UOVO: Trovato in Warm Ocean Ruins (archeologia)',
+      'RIPRODUZIONE: SÌ con Torchflower Seeds.',
+      'HP: 14 (7 cuori). DANNO: NON ATTACCA MAI.',
+      'ABILITÀ: Sniffa il terreno e trova Torchflower Seeds e Pitcher Pods'
+    ],
+    tips: [
+      'Usa brush sulle suspicious sand nelle Warm Ocean Ruins',
+      'I semi crescono in fiori decorativi unici',
+      'È il mob più grande del gioco!',
+      'I fiori trovati sono puramente decorativi'
+    ],
+    keywords: ['sniffer', 'mob', 'archaeology', 'torchflower', 'pitcher', 'semi', '1.20', 'uovo']
+  },
+  {
+    id: 'archaeology-system',
+    category: 'info',
+    subcategory: 'Mechanics',
+    title: 'Sistema di Archeologia (1.20)',
+    description: 'L\'archeologia permette di trovare item rari usando il brush su Suspicious Sand/Gravel.',
+    details: [
+      'Tool: Brush (feather + copper ingot + stick)',
+      'Suspicious Sand: Desert Temple, Desert Well, Ocean Ruins',
+      'Suspicious Gravel: Trail Ruins, Cold Ocean Ruins',
+      'Pottery Sherd: 20 design diversi per Decorated Pots',
+      'Drop: sherd, armor trim, sniffer egg, etc.'
+    ],
+    tips: [
+      'Non scavare suspicious blocks con piccone: si rompono!',
+      'Usa il brush lentamente',
+      'I decorated pot si craftano con 4 sherd/brick'
+    ],
+    keywords: ['archeologia', 'archaeology', 'brush', 'suspicious', 'sand', 'gravel', 'sherd', 'pottery', '1.20']
+  },
+  {
+    id: 'mace-weapon',
+    category: 'combat',
+    subcategory: 'Armi',
+    title: 'Mace - Nuova Arma (1.21)',
+    description: 'Il Mace è una nuova arma della 1.21 che fa danno bonus basato sulla caduta.',
+    details: [
+      'Crafting: Breeze Rod + Heavy Core',
+      'Heavy Core: trovato nei Vault delle Trial Chamber',
+      'Danno base: 7 (3.5 cuori)',
+      'BONUS CADUTA: più cadi, più danno fai!',
+      'Annulla il danno da caduta quando colpisci'
+    ],
+    tips: [
+      'Usa Wind Charge per lanciarti in aria, poi attacca',
+      'Combo devastante con Elytra + Mace',
+      'Encantesimi unici: Density, Breach, Wind Burst',
+      'Wind Burst ti rimbalza in aria dopo aver colpito'
+    ],
+    table: {
+      headers: ['Enchant', 'Effetto', 'Max Level'],
+      rows: [
+        ['Density', '+0.5 danno per blocco caduto per level', 'V'],
+        ['Breach', 'Ignora % di armor del target', 'IV'],
+        ['Wind Burst', 'Ti lancia in aria dopo hit', 'III']
+      ]
+    },
+    keywords: ['mace', 'arma', 'weapon', 'breeze', 'heavy core', '1.21', 'trial', 'caduta', 'fall']
+  },
+  {
+    id: 'wind-charge-item',
+    category: 'info',
+    subcategory: 'Items',
+    title: 'Wind Charge - Come Usarla (1.21)',
+    description: 'La Wind Charge è un item lanciabile che sposta mob e giocatori.',
+    details: [
+      'Crafting: 1 Breeze Rod = 4 Wind Charge',
+      'Effetto: spinge mob/giocatore nella direzione di impatto',
+      'Annulla fall damage se usata su te stesso',
+      'Cooldown: 0.5 secondi tra lanci',
+      'Puoi usarla per salti tripli/quadrupli'
+    ],
+    tips: [
+      'Lanciati in aria per Mace combo',
+      'Spingi i mob nel vuoto',
+      'Utile per parkour verticale',
+      'Combinala con Elytra per boost'
+    ],
+    keywords: ['wind', 'charge', 'breeze', 'rod', '1.21', 'jump', 'volo', 'parkour']
+  },
+  {
+    id: 'vault-block',
+    category: 'info',
+    subcategory: 'Blocks',
+    title: 'Vault - Come Aprirlo (1.21)',
+    description: 'I Vault sono blocchi nelle Trial Chamber che contengono loot rari.',
+    details: [
+      'Richiede: Trial Key per aprire',
+      'Una volta aperto PER GIOCATORE, non può essere riaperto da quel player',
+      'Loot: armor trim, enchanted gear, Heavy Core, etc.',
+      'Ominous Vault: richiede Ominous Trial Key (migliore loot)'
+    ],
+    tips: [
+      'Ogni giocatore può aprire ogni vault una volta',
+      'In multiplayer tutti possono prendere loot',
+      'Ominous Vault ha chance per Heavy Core'
+    ],
+    keywords: ['vault', 'trial', 'key', 'loot', 'heavy core', '1.21', 'ominous']
+  },
+  {
+    id: 'copper-bulb',
+    category: 'redstone',
+    subcategory: 'Componenti',
+    title: 'Copper Bulb - Luce Redstone (1.21)',
+    description: 'Il Copper Bulb è un nuovo blocco luce che si ossida e cambia luminosità.',
+    details: [
+      'Toggle: si accende/spegne con segnale redstone',
+      'Luminosità varia con ossidazione: 15→12→8→4',
+      'Può essere waxed per bloccare ossidazione',
+      'Perfetto per lamp arrays controllabili'
+    ],
+    tips: [
+      'Non si spegne quando togli il segnale!',
+      'Serve un nuovo impulso per toggleare',
+      'Usa axe per de-waxare',
+      'Ottimo per costruzioni decorative'
+    ],
+    keywords: ['copper', 'bulb', 'luce', 'light', 'redstone', 'ossidazione', '1.21']
+  },
+  {
+    id: 'crafter-block',
+    category: 'redstone',
+    subcategory: 'Componenti',
+    title: 'Crafter - Crafting Automatico (1.21)',
+    description: 'Il Crafter è un blocco che permette crafting automatico con redstone!',
+    details: [
+      'Crafta automaticamente quando riceve segnale redstone',
+      'I slot possono essere disabilitati cliccando',
+      'Emette item verso contenitori adiacenti',
+      'Comparator legge il numero di slot pieni'
+    ],
+    tips: [
+      'Disabilita slot per craft con meno di 9 ingredienti',
+      'Perfetto per auto-crafting farms',
+      'Combinalo con hopper e sorting system',
+      'Rivoluziona le farm automatiche!'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7oq4UWsSTNg',
+    keywords: ['crafter', 'crafting', 'automatico', 'redstone', 'farm', '1.21', 'autocraft']
   }
 ];
+
 
 // Function to search the knowledge base
 export function searchKnowledgeBase(query: string): InfoItem[] {

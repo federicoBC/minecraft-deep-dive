@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, AlertTriangle, Lightbulb, Info } from 'lucide-react';
+import { ChevronDown, ChevronUp, AlertTriangle, Lightbulb, Info, PlayCircle, Image as ImageIcon } from 'lucide-react';
 import { InfoItem } from '@/data/knowledgeBase';
 import { cn } from '@/lib/utils';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface InfoCardProps {
   item: InfoItem;
@@ -147,6 +148,85 @@ export function InfoCard({ item, highlightKeyword }: InfoCardProps) {
                   ))}
                 </tbody>
               </table>
+            </div>
+          )}
+
+          {/* Step-by-Step Guide */}
+          {item.steps && item.steps.length > 0 && (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <ImageIcon className="w-4 h-4 text-primary" />
+                <h4 className="font-semibold text-foreground">Tutorial Passo-Passo</h4>
+              </div>
+              <div className="space-y-4">
+                {item.steps.map((step) => (
+                  <div key={step.step} className="bg-secondary/30 rounded-lg p-3">
+                    <div className="flex items-start gap-3">
+                      <div className="shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">
+                        {step.step}
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-foreground mb-1">{step.title}</h5>
+                        <p className="text-sm text-muted-foreground">{step.description}</p>
+                        {step.imageUrl && (
+                          <div className="mt-2 rounded-lg overflow-hidden border border-border">
+                            <img 
+                              src={step.imageUrl} 
+                              alt={`Step ${step.step}: ${step.title}`}
+                              className="w-full h-auto object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Images Gallery */}
+          {item.images && item.images.length > 0 && (
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <ImageIcon className="w-4 h-4 text-primary" />
+                <h4 className="font-semibold text-foreground">Immagini</h4>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {item.images.map((img, i) => (
+                  <div key={i} className="rounded-lg overflow-hidden border border-border">
+                    <img 
+                      src={img.url} 
+                      alt={img.caption}
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                    />
+                    <p className="text-xs text-muted-foreground p-2 bg-secondary/50">{img.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* YouTube Video */}
+          {item.videoUrl && (
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <PlayCircle className="w-4 h-4 text-redstone" />
+                <h4 className="font-semibold text-foreground">Video Tutorial</h4>
+              </div>
+              <div className="rounded-lg overflow-hidden border border-border">
+                <AspectRatio ratio={16 / 9}>
+                  <iframe
+                    src={item.videoUrl}
+                    title="Video Tutorial"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
             </div>
           )}
 
