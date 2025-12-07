@@ -207,6 +207,17 @@ export const knowledgeBase: InfoItem[] = [
       'AFK a 100+ blocchi di altezza dal terreno',
       'Looting III sulla spada aumenta il drop'
     ],
+    images: [
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d1/Creeper_JE3.png', caption: 'Creeper - Il mob che droppa gunpowder' },
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/84/Oak_Trapdoor_JE4_BE2.png', caption: 'Trapdoor - Blocco chiave per la farm' }
+    ],
+    steps: [
+      { step: 1, title: 'Trova la posizione', description: 'Costruisci sopra un oceano a Y 200+ per massimizzare lo spawn rate.' },
+      { step: 2, title: 'Piattaforma base', description: 'Crea piattaforme 9x9 con 2 blocchi di altezza e trapdoor aperte sul soffitto.' },
+      { step: 3, title: 'Sistema anti-spider', description: 'Aggiungi carpet ogni 3 blocchi per impedire lo spawn degli spider.' },
+      { step: 4, title: 'Sistema di killing', description: 'Aggiungi acqua che spinge i creeper verso un drop di 24 blocchi o lava.' },
+      { step: 5, title: 'Raccolta', description: 'Posiziona hopper e chest alla base per raccogliere automaticamente la gunpowder.' }
+    ],
     videoUrl: 'https://www.youtube.com/embed/y0yd2LRxlBM',
     keywords: ['creeper', 'farm', 'gunpowder', 'polvere da sparo', 'tnt', 'trapdoor']
   },
@@ -227,6 +238,17 @@ export const knowledgeBase: InfoItem[] = [
       'Name tag sullo zombie per non farlo despawnare',
       'Hopper + chest per raccolta automatica'
     ],
+    images: [
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/ee/Iron_Golem_JE2_BE2.png', caption: 'Iron Golem - Droppa 3-5 iron ingots' },
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/05/Zombie_JE3_BE2.png', caption: 'Zombie - Necessario per spaventare i villager' }
+    ],
+    steps: [
+      { step: 1, title: 'Prepara i villager', description: 'Cattura o trasporta 3 villager nella tua farm.' },
+      { step: 2, title: 'Posiziona letti e workstation', description: 'Ogni villager deve avere accesso a 1 letto e 1 postazione lavoro.' },
+      { step: 3, title: 'Aggiungi lo zombie', description: 'Cattura uno zombie, dagli un name tag e posizionalo dove i villager possono vederlo.' },
+      { step: 4, title: 'Sistema di killing', description: 'Crea una zona con lava o cactus dove i golem vengono spinti.' },
+      { step: 5, title: 'Raccolta automatica', description: 'Posiziona hopper sotto la zona di killing per raccogliere il ferro.' }
+    ],
     videoUrl: 'https://www.youtube.com/embed/0L_optIDhKo',
     keywords: ['ferro', 'iron', 'farm', 'golem', 'villager', 'automatica']
   },
@@ -246,6 +268,17 @@ export const knowledgeBase: InfoItem[] = [
       'L\'endermite deve essere intrappolata in un minecart',
       'Usa name tag sull\'endermite',
       'Looting III per perle extra'
+    ],
+    images: [
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0a/Enderman_%28idle%29_JE1.png', caption: 'Enderman - Ottimo per XP farm' },
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/30/Endermite_JE2_BE2.png', caption: 'Endermite - Usato come esca' }
+    ],
+    steps: [
+      { step: 1, title: 'Vai nell\'End', description: 'Sconfiggi l\'Ender Dragon e trova le isole esterne.' },
+      { step: 2, title: 'Costruisci lontano', description: 'Vai a 128+ blocchi dall\'isola centrale in qualsiasi direzione.' },
+      { step: 3, title: 'Crea la piattaforma', description: 'Costruisci una piattaforma larga con un buco centrale di 3x3.' },
+      { step: 4, title: 'Posiziona l\'endermite', description: 'Lancia ender pearl finché non spawna un endermite, catturalo in minecart.' },
+      { step: 5, title: 'Zona di killing', description: 'Gli enderman cadranno nel buco. Usa trapdoor per farli cadere a 1 HP.' }
     ],
     videoUrl: 'https://www.youtube.com/embed/nh8voJScSbw',
     keywords: ['xp', 'enderman', 'farm', 'end', 'esperienza', 'livelli']
@@ -342,6 +375,17 @@ export const knowledgeBase: InfoItem[] = [
       'Slow Falling potion per non morire',
       'Pumpkin head per evitare aggro Enderman',
       'Letti esplodono nell\'End = danno massiccio'
+    ],
+    images: [
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0a/Ender_Dragon.gif', caption: 'Ender Dragon - Il boss finale' },
+      { url: 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a3/End_Crystal_JE2_BE2.gif', caption: 'End Crystal - Distruggili prima!' }
+    ],
+    steps: [
+      { step: 1, title: 'Preparazione', description: 'Porta: arco con frecce, spada con Sharpness, letti (5+), Slow Falling, ender pearl.' },
+      { step: 2, title: 'Entra nell\'End', description: 'Attiva il portale nell\'End con gli Eyes of Ender.' },
+      { step: 3, title: 'Distruggi i cristalli', description: 'Distruggi tutti i cristalli sulle torri con arco o arrampicandoti.' },
+      { step: 4, title: 'Attacca il drago', description: 'Quando atterra sulla fontana, colpiscilo con la spada o usa i letti (esplodono!).' },
+      { step: 5, title: 'Finiscilo', description: 'Ripeti fino a quando il drago non muore. Raccogli l\'XP e l\'uovo!' }
     ],
     videoUrl: 'https://www.youtube.com/embed/LUCEJz3OGBA',
     keywords: ['ender dragon', 'drago', 'end', 'boss', 'cristalli']
